@@ -3,13 +3,13 @@ import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import GlowingHeroOrb from './components/GlowingHeroOrb';
 import NeuronIntegrationMatrix from './components/NeuronIntegrationMatrix';
+import ClarityEngineMatrix from './components/ClarityEngineMatrix';
 import NeuralDataStream from './components/NeuralDataStream';
 import CyberneticTreeAEO from './components/CyberneticTreeAEO';
 import ToolkitFeatureGrid from './components/ToolkitFeatureGrid';
 import LeadFinderSandbox from './components/LeadFinderSandbox';
 import ProductSuiteTabs from './components/ProductSuiteTabs';
 import CompetitorComparison from './components/CompetitorComparison';
-import EngineShowcase from './components/EngineShowcase';
 import AISimulator from './components/AISimulator';
 import GrowthCalculator from './components/GrowthCalculator';
 import RoadmapMatrix from './components/RoadmapMatrix';
@@ -48,6 +48,9 @@ export default function App() {
         {/* Boltshift & BusinessDec Central AI Orb Hero */}
         <GlowingHeroOrb openBookingModal={() => setIsBookingOpen(true)} />
 
+        {/* 6 Core Platform Engine Modules in "Clarity Engine / Idea to Direction" Image Format */}
+        <ClarityEngineMatrix openBookingModal={() => setIsBookingOpen(true)} />
+
         {/* Neuron Tool Integration Matrix */}
         <NeuronIntegrationMatrix />
 
@@ -62,7 +65,6 @@ export default function App() {
         <ToolkitFeatureGrid openBookingModal={() => setIsBookingOpen(true)} />
         <ProductSuiteTabs openBookingModal={() => setIsBookingOpen(true)} />
         <CompetitorComparison openBookingModal={() => setIsBookingOpen(true)} />
-        <EngineShowcase />
         <AISimulator />
         <GrowthCalculator openBookingModal={() => setIsBookingOpen(true)} />
         <RoadmapMatrix />
