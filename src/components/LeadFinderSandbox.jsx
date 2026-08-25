@@ -15,40 +15,40 @@ import {
 } from 'lucide-react';
 
 export default function LeadFinderSandbox() {
-  const [domain, setDomain] = useState('techscale.io');
+  const [domain, setDomain] = useState('growixa.io');
   const [targetRole, setTargetRole] = useState('Head of Growth');
   const [isSearching, setIsSearching] = useState(false);
   const [copiedIndex, setCopiedIndex] = useState(null);
 
   const [results, setResults] = useState([
     {
-      name: 'Sarah Jenkins',
-      title: 'VP of Growth & Marketing',
-      email: 's.jenkins@techscale.io',
-      phone: '+1 (415) 890-2341',
-      location: 'San Francisco, CA',
-      smtpStatus: 'VERIFIED',
-      deliverabilityScore: 99.8,
-      creditsUsed: 1
-    },
-    {
-      name: 'Marcus Vance',
-      title: 'Chief Marketing Officer',
-      email: 'marcus@techscale.io',
-      phone: '+1 (415) 890-5612',
+      name: 'Sophia Rodriguez',
+      title: 'VP of Global Growth & Marketing',
+      email: 's.rodriguez@growixa.io',
+      phone: '+1 (415) 980-2341',
       location: 'San Francisco, CA',
       smtpStatus: 'VERIFIED',
       deliverabilityScore: 100.0,
       creditsUsed: 1
     },
     {
-      name: 'Elena Rostova',
-      title: 'Head of Demand Generation',
-      email: 'e.rostova@techscale.io',
-      phone: '+1 (415) 890-9942',
+      name: 'David Sterling',
+      title: 'Chief Marketing Officer (CMO)',
+      email: 'd.sterling@growixa.io',
+      phone: '+1 (212) 890-5612',
+      location: 'New York, NY',
+      smtpStatus: 'VERIFIED',
+      deliverabilityScore: 99.9,
+      creditsUsed: 1
+    },
+    {
+      name: 'Vikramaditya Sharma',
+      title: 'Head of Demand Generation & Revenue',
+      email: 'v.sharma@growixa.io',
+      phone: '+1 (512) 782-9942',
       location: 'Austin, TX',
       smtpStatus: 'VERIFIED',
-      deliverabilityScore: 99.4,
+      deliverabilityScore: 99.8,
       creditsUsed: 1
     }
   ]);
@@ -57,12 +57,12 @@ export default function LeadFinderSandbox() {
     e.preventDefault();
     setIsSearching(true);
     setTimeout(() => {
-      const cleanDomain = domain.replace('https://', '').replace('http://', '').split('/')[0] || 'company.com';
+      const cleanDomain = domain.replace('https://', '').replace('http://', '').split('/')[0] || 'growixa.io';
       setResults([
         {
-          name: 'Alex Mercer',
-          title: targetRole || 'VP of Marketing',
-          email: `a.mercer@${cleanDomain}`,
+          name: 'Aarav Kapoor',
+          title: targetRole || 'Director of Enterprise Sales',
+          email: `a.kapoor@${cleanDomain}`,
           phone: '+1 (415) 782-9910',
           location: 'San Francisco, CA',
           smtpStatus: 'VERIFIED',
@@ -71,22 +71,22 @@ export default function LeadFinderSandbox() {
         },
         {
           name: 'Samantha Ray',
-          title: 'Director of Growth Engineering',
+          title: 'VP of Revenue Engineering',
           email: `s.ray@${cleanDomain}`,
-          phone: '+1 (415) 782-4421',
+          phone: '+1 (212) 782-4421',
           location: 'New York, NY',
           smtpStatus: 'VERIFIED',
-          deliverabilityScore: 99.5,
+          deliverabilityScore: 99.7,
           creditsUsed: 1
         },
         {
-          name: 'David Chen',
-          title: 'Head of Product Marketing',
-          email: `d.chen@${cleanDomain}`,
-          phone: '+1 (415) 782-1133',
+          name: 'Michael Vance',
+          title: 'Chief Growth Officer',
+          email: `m.vance@${cleanDomain}`,
+          phone: '+1 (206) 782-1133',
           location: 'Seattle, WA',
           smtpStatus: 'VERIFIED',
-          deliverabilityScore: 99.7,
+          deliverabilityScore: 99.8,
           creditsUsed: 1
         }
       ]);
@@ -143,7 +143,7 @@ export default function LeadFinderSandbox() {
                     fontSize: '0.95rem',
                     outline: 'none'
                   }}
-                  placeholder="e.g. stripe.com"
+                  placeholder="e.g. growixa.io"
                 />
               </div>
             </div>
@@ -198,7 +198,7 @@ export default function LeadFinderSandbox() {
             </button>
           </form>
 
-          {/* Results Table (Bright White Text & Cyber Style) */}
+          {/* Results Table */}
           <div style={{ background: '#030712', borderRadius: 'var(--radius-md)', border: '1px solid rgba(0, 240, 255, 0.3)', padding: '1.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', paddingBottom: '0.75rem', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -296,7 +296,7 @@ export default function LeadFinderSandbox() {
               </table>
             </div>
 
-            {/* Wallet credit usage info footer (Bright White & Cyan Text) */}
+            {/* Wallet credit usage info footer */}
             <div style={{ marginTop: '1.25rem', paddingTop: '0.85rem', borderTop: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.85rem', color: '#E2E8F0', flexWrap: 'wrap', gap: '0.5rem' }}>
               <span style={{ color: '#F1F5F9', fontWeight: 500 }}>
                 GrowthToolkit Credit Model: Pay only for 100% verified SMTP deliverability.
