@@ -5,8 +5,8 @@ import {
   Zap, 
   ShieldCheck, 
   ArrowRight,
-  Layers,
-  HelpCircle
+  Database,
+  Coins
 } from 'lucide-react';
 
 export default function PricingSection({ openBookingModal }) {
@@ -14,59 +14,62 @@ export default function PricingSection({ openBookingModal }) {
 
   const plans = [
     {
-      name: 'Starter Growth',
-      badge: 'Single-Tenant MVP',
+      name: 'Starter',
+      badge: '500 Credits/mo',
       priceMonthly: 49,
       priceAnnual: 39,
-      description: 'Ideal for early-stage startups needing high-deliverability email marketing and core CRM contact segmenting.',
+      creditCost: '$0.08 / credit',
+      description: 'Ideal for early-stage sales reps, SDRs, and founders getting started with targeted lead outreach.',
       features: [
-        'Postmark & Custom SMTP Connection (Fernet)',
-        'Centralized CRM with Email Deduplication',
-        'CSV Import & Attribute Column Mapping',
-        'Rule-Based Dynamic Audience Segments',
-        'GDPR & TCPA Consent Suppression Lists',
-        'Email Campaign Scheduler & Basic Analytics',
-        'Single User Login & Brand Voice Profile'
+        '500 Verified Email & Phone Credits per month',
+        'Deep Search B2B Prospecting Database',
+        'LinkedIn & Sales Navigator Chrome Extension',
+        'Real-Time Triple SMTP Email Verifier',
+        'Catch-All Server Validation Algorithm',
+        'Postmark & Custom SMTP Email Campaigns',
+        'Under 2.5% Bounce Rate Guarantee'
       ],
-      ctaText: 'Start Free 14-Day Trial',
+      ctaText: 'Start Free Trial (500 Credits)',
       highlighted: false
     },
     {
-      name: 'Pro Automation',
-      badge: 'Most Popular',
+      name: 'Growth',
+      badge: 'Most Popular - 2,500 Credits/mo',
       priceMonthly: 129,
       priceAnnual: 99,
-      description: 'Designed for scaling SaaS and growth teams combining email, social media, SMS, and AI brand content.',
+      creditCost: '$0.04 / credit',
+      description: 'Designed for scaling sales teams and growth agencies conducting high-volume prospecting campaigns.',
       features: [
-        'Everything in Starter Growth, plus:',
-        'LinkedIn & Twitter/X OAuth 2.0 Automation',
-        'Unified Drag & Drop Social/Email Calendar',
-        'AI Content Assistant (Copy, Subjects, Captions)',
-        'Mandatory AI Brand Voice & Safety Approvals',
-        'Bulk SMS Marketing (Twilio GSM-7 Calculator)',
-        'Token Cost Telemetry & Provider Billing',
-        'Multi-Role RBAC Management (6 Roles)'
+        'Everything in Starter, plus:',
+        '2,500 Verified Email & Phone Credits per month',
+        'Unused Credits Rollover Indefinitely',
+        'Direct Executive Mobile Phone Numbers',
+        'Bulk CSV Domain & Contact Enrichment',
+        'Dynamic CRM Rule Audience Segments',
+        'AI Content Assistant & Brand Safety Engine',
+        'Multi-Role Team Management (6 RBAC Roles)'
       ],
-      ctaText: 'Launch Pro Platform',
+      ctaText: 'Get Growth Toolkit',
       highlighted: true
     },
     {
-      name: 'Enterprise SaaS',
-      badge: 'Sprint 5 Complete',
+      name: 'Pro',
+      badge: '10,000 Credits/mo',
       priceMonthly: 299,
       priceAnnual: 239,
-      description: 'For high-growth platforms requiring multi-tenant account isolation, WhatsApp, and GEO/AEO autonomous agents.',
+      creditCost: '$0.024 / credit',
+      description: 'For high-growth revenue organizations requiring enterprise B2B data volume and dedicated support.',
       features: [
-        'Everything in Pro Automation, plus:',
+        'Everything in Growth, plus:',
+        '10,000 Verified Email & Phone Credits per month',
         'Strict Account ID DB Multi-Tenant Isolation',
-        'WhatsApp Marketing (Meta Cloud API)',
-        'Answer Engine Optimization (AEO Execution)',
-        'Generative Engine Optimization (GEO Agents)',
-        'Admin Infrastructure Ops Health Panel',
-        'Insert-Only Security Audit Event Logs',
-        'Dedicated Solutions Architect & SLA Support'
+        'Generative Engine Optimization (GEO/AEO Agents)',
+        'WhatsApp Meta Cloud API Marketing',
+        'Dedicated Dedicated IP Warm-Up Support',
+        'RESTful API Access & Webhook Streaming',
+        'Dedicated Account Manager & SLA Guarantee'
       ],
-      ctaText: 'Contact Sales / Custom',
+      ctaText: 'Contact Sales / Custom Volume',
       highlighted: false
     }
   ];
@@ -75,15 +78,15 @@ export default function PricingSection({ openBookingModal }) {
     <section id="pricing" style={{ padding: '6rem 0' }}>
       <div className="container">
         {/* Header */}
-        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 3.5rem auto' }}>
+        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 3.5rem auto' }}>
           <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-indigo)' }}>
-            Sprint 5 SaaS Subscription Tiers
+            GrowthToolkit.io Pricing & Credit Wallet
           </span>
           <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', marginTop: '0.5rem', marginBottom: '1rem' }}>
-            Transparent <span className="gradient-text">Growth Investment</span>
+            Pay Only for <span className="gradient-text">Triple Verified Leads</span>
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-            Scale effortlessly from single-tenant MVP to full multi-tenant SaaS. Switch billing cycles anytime.
+            Zero credits charged on invalid emails or bounces. Unused credits roll over infinitely with no expiration.
           </p>
 
           {/* Billing Cycle Toggle */}
@@ -154,8 +157,8 @@ export default function PricingSection({ openBookingModal }) {
                   justifyContent: 'space-between',
                   position: 'relative',
                   border: plan.highlighted ? '2px solid var(--accent-emerald)' : '1px solid var(--border-color)',
-                  boxShadow: plan.highlighted ? '0 15px 40px rgba(16, 185, 129, 0.15)' : 'none',
-                  background: plan.highlighted ? 'rgba(15, 23, 42, 0.85)' : 'var(--bg-card)'
+                  boxShadow: plan.highlighted ? '0 15px 40px rgba(16, 185, 129, 0.18)' : 'none',
+                  background: plan.highlighted ? 'rgba(15, 23, 42, 0.88)' : 'var(--bg-card)'
                 }}
               >
                 {/* Badge if featured */}
@@ -194,16 +197,16 @@ export default function PricingSection({ openBookingModal }) {
                   </p>
 
                   {/* Price display */}
-                  <div style={{ marginBottom: '2rem' }}>
+                  <div style={{ marginBottom: '1.75rem' }}>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.3rem' }}>
                       <span style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--text-primary)' }}>
                         ${price}
                       </span>
                       <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>/month</span>
                     </div>
-                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                      {annualBilling ? 'Billed annually ($' + (price * 12) + '/yr)' : 'Billed monthly'}
-                    </span>
+                    <div style={{ fontSize: '0.8rem', color: 'var(--accent-emerald)', fontWeight: 600, marginTop: '0.2rem' }}>
+                      ⚡ Effective Cost: {plan.creditCost}
+                    </div>
                   </div>
 
                   {/* Features list */}
@@ -211,7 +214,7 @@ export default function PricingSection({ openBookingModal }) {
                     {plan.features.map((feat, fIdx) => (
                       <div key={fIdx} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', fontSize: '0.875rem' }}>
                         <Check size={16} color="var(--accent-emerald)" style={{ flexShrink: 0, marginTop: '3px' }} />
-                        <span style={{ color: fIdx === 0 && plan.name !== 'Starter Growth' ? 'var(--text-primary)' : 'var(--text-secondary)', fontWeight: fIdx === 0 && plan.name !== 'Starter Growth' ? 600 : 400 }}>
+                        <span style={{ color: fIdx === 0 && plan.name !== 'Starter' ? 'var(--text-primary)' : 'var(--text-secondary)', fontWeight: fIdx === 0 && plan.name !== 'Starter' ? 600 : 400 }}>
                           {feat}
                         </span>
                       </div>

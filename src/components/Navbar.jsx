@@ -4,10 +4,13 @@ import {
   Sun, 
   Moon, 
   Sparkles, 
-  ChevronRight,
+  Search, 
+  ShieldCheck, 
+  Chrome, 
+  Mail, 
+  Database,
   Menu,
-  X,
-  Search
+  X
 } from 'lucide-react';
 
 export default function Navbar({ theme, toggleTheme, openBookingModal }) {
@@ -41,60 +44,57 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Brand Logo */}
+        {/* Brand Logo - GrowthToolkit Format */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
           <div style={{
             width: '42px',
             height: '42px',
-            borderRadius: '12px',
-            background: 'linear-gradient(135deg, #10B981 0%, #6366F1 100%)',
+            borderRadius: '10px',
+            background: 'linear-gradient(135deg, #3B82F6 0%, #10B981 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             color: '#FFFFFF',
-            boxShadow: '0 4px 15px rgba(16, 185, 129, 0.3)'
+            boxShadow: '0 4px 15px rgba(59, 130, 246, 0.35)'
           }}>
             <Zap size={24} />
           </div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ fontSize: '1.4rem', fontWeight: 800, letterSpacing: '-0.03em', color: 'var(--text-primary)' }}>
-                GROWIXA
-              </span>
-              <span className="status-pill status-pill-done" style={{ padding: '0.15rem 0.5rem', fontSize: '0.65rem' }}>
-                Brevo & Growth Suite
+                GROWIXA <span style={{ color: 'var(--accent-emerald)' }}>TOOLKIT</span>
               </span>
             </div>
             <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginTop: '-2px' }}>
-              Autonomous AI Growth Platform
+              Most Accurate B2B Email & Phone Database
             </span>
           </div>
         </a>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links - GrowthToolkit Navbar Items */}
         <div style={{ 
           display: 'none', 
           alignItems: 'center', 
           gap: '2rem',
           '@media (min-width: 992px)': { display: 'flex' }
         }} className="desktop-nav">
-          <a href="#suites" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            Product Suites
-          </a>
           <a href="#prospecting" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            B2B Prospecting
+            Prospecting
           </a>
-          <a href="#engines" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            Engine Catalog
+          <a href="#features" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+            Email Finder
           </a>
-          <a href="#ai-composer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            AI Sandbox
+          <a href="#features" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+            LinkedIn Extension
+          </a>
+          <a href="#features" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+            Verifications
           </a>
           <a href="#pricing" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            SaaS Pricing
+            Pricing
           </a>
           <a href="#faq" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            FAQ
+            API Docs
           </a>
         </div>
 
@@ -128,7 +128,7 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
             style={{ padding: '0.6rem 1.25rem', fontSize: '0.9rem' }}
           >
             <Sparkles size={16} />
-            <span>Try Free</span>
+            <span>Get 500 Free Credits</span>
           </button>
 
           {/* Mobile Menu Toggle */}
@@ -149,7 +149,7 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div style={{
           background: 'var(--bg-secondary)',
@@ -159,12 +159,12 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
           flexDirection: 'column',
           gap: '1rem'
         }}>
-          <a href="#suites" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Product Suites</a>
-          <a href="#prospecting" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>B2B Prospecting</a>
-          <a href="#engines" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Engine Catalog</a>
-          <a href="#ai-composer" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>AI Sandbox</a>
-          <a href="#pricing" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>SaaS Pricing</a>
-          <a href="#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>FAQ</a>
+          <a href="#prospecting" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Prospecting</a>
+          <a href="#features" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Email Finder</a>
+          <a href="#features" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>LinkedIn Extension</a>
+          <a href="#features" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Verifications</a>
+          <a href="#pricing" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Pricing</a>
+          <a href="#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>API Docs</a>
         </div>
       )}
     </nav>

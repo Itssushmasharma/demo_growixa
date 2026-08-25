@@ -4,16 +4,13 @@ import {
   ArrowRight, 
   CheckCircle2, 
   Mail, 
-  Share2, 
-  MessageSquare, 
   Search, 
   ShieldCheck,
   TrendingUp,
-  Cpu,
-  Zap,
-  Bot,
   Award,
-  Star
+  Star,
+  Users,
+  Database
 } from 'lucide-react';
 
 export default function Hero({ openBookingModal }) {
@@ -34,24 +31,24 @@ export default function Hero({ openBookingModal }) {
           margin: '0 auto',
           textAlign: 'center'
         }}>
-          {/* Release Version & Award Banner */}
+          {/* GrowthToolkit.io Top Chip Badge */}
           <div style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.6rem',
             padding: '0.4rem 1.25rem',
             borderRadius: 'var(--radius-full)',
-            background: 'rgba(16, 185, 129, 0.1)',
-            border: '1px solid rgba(16, 185, 129, 0.3)',
+            background: 'rgba(59, 130, 246, 0.12)',
+            border: '1px solid rgba(59, 130, 246, 0.3)',
             marginBottom: '2rem'
           }}>
-            <span className="pulse-dot" />
-            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#34D399' }}>
-              Rated #1 Marketing & B2B Prospecting Suite (G2 Leader 2026 & Capterra)
+            <span className="pulse-dot" style={{ backgroundColor: '#3B82F6' }} />
+            <span style={{ fontSize: '0.85rem', fontWeight: 600, color: '#60A5FA' }}>
+              Most Accurate B2B Email & Phone Number Database
             </span>
           </div>
 
-          {/* Main Brevo/GrowthToolkit Style Headline */}
+          {/* GrowthToolkit.io Main Title */}
           <h1 style={{
             fontSize: 'clamp(2.5rem, 5.5vw, 4.25rem)',
             fontWeight: 800,
@@ -59,10 +56,10 @@ export default function Hero({ openBookingModal }) {
             marginBottom: '1.5rem',
             letterSpacing: '-0.03em'
           }}>
-            Build Stronger Customer Relationships & <span className="gradient-text">Scale Revenue 4x Faster</span>
+            The Ultimate B2B Prospecting Tool – <span className="gradient-text">Find, Verify & Enrich Leads</span> in One Platform
           </h1>
 
-          {/* Subtitle */}
+          {/* GrowthToolkit.io Subtitle */}
           <p style={{
             fontSize: 'clamp(1.1rem, 2vw, 1.35rem)',
             color: 'var(--text-secondary)',
@@ -70,7 +67,7 @@ export default function Hero({ openBookingModal }) {
             fontWeight: 400,
             lineHeight: 1.6
           }}>
-            The all-in-one platform combining **Brevo-style multi-channel marketing** (Email, SMS, WhatsApp, Web Push) with **GrowthToolkit-style B2B executive lead prospecting** and autonomous AI agents.
+            We find emails and phone numbers others can't using deep search, catch-all verification, and unmatched data coverage. Pay only for triple verified emails and phone numbers with bounce rate under 2.5%.
           </p>
 
           {/* CTA Buttons */}
@@ -87,7 +84,7 @@ export default function Hero({ openBookingModal }) {
               className="btn-primary"
               style={{ padding: '0.9rem 2.25rem', fontSize: '1.05rem' }}
             >
-              <span>Get Started Free (500 Credits)</span>
+              <span>Get 500 Free Credits</span>
               <ArrowRight size={18} />
             </button>
 
@@ -97,42 +94,38 @@ export default function Hero({ openBookingModal }) {
               style={{ padding: '0.9rem 2rem', fontSize: '1.05rem' }}
             >
               <Search size={18} />
-              <span>Test B2B Lead Finder</span>
+              <span>Test Live Prospecting Tool</span>
             </a>
           </div>
 
-          {/* Award Badges Grid (Brevo & Capterra style) */}
+          {/* GrowthToolkit.io Key Metrics Proof Bar */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '2rem',
+            gap: '2.5rem',
             flexWrap: 'wrap',
-            paddingTop: '1.5rem',
+            paddingTop: '1.75rem',
             borderTop: '1px solid var(--border-color)',
-            fontSize: '0.85rem',
+            fontSize: '0.875rem',
             color: 'var(--text-secondary)'
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Award size={18} color="var(--accent-amber)" />
-              <span><strong>G2 Leader</strong> 2026 Spring</span>
+              <ShieldCheck size={18} color="var(--accent-emerald)" />
+              <span><strong>Under 2.5%</strong> Bounce Guarantee</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Star size={18} color="var(--accent-emerald)" fill="var(--accent-emerald)" />
-              <span><strong>4.9 / 5.0</strong> Capterra Usability</span>
+              <Database size={18} color="var(--accent-indigo)" />
+              <span><strong>250M+</strong> B2B Verified Profiles</span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <ShieldCheck size={18} color="var(--accent-indigo)" />
-              <span><strong>ISO 27001</strong> & GDPR Certified</span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Zap size={18} color="var(--accent-cyan)" />
-              <span><strong>99.82%</strong> Inbox Deliverability</span>
+              <Users size={18} color="var(--accent-cyan)" />
+              <span><strong>10,000+</strong> Sales Reps & Founders</span>
             </div>
           </div>
         </div>
 
-        {/* Live Interactive Brevo-Style Dashboard Preview Card */}
+        {/* GrowthToolkit.io Dashboard Prospecting Preview Card */}
         <div style={{
           marginTop: '4rem',
           position: 'relative'
@@ -143,7 +136,7 @@ export default function Hero({ openBookingModal }) {
             border: '1px solid rgba(255, 255, 255, 0.12)',
             boxShadow: '0 20px 50px rgba(0, 0, 0, 0.5)'
           }}>
-            {/* Dashboard Header Bar */}
+            {/* Window Header */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -157,96 +150,42 @@ export default function Hero({ openBookingModal }) {
                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#F59E0B' }} />
                 <div style={{ width: '12px', height: '12px', borderRadius: '50%', background: '#10B981' }} />
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontFamily: 'var(--font-mono)', marginLeft: '0.5rem' }}>
-                  growixa.ai/dashboard/marketing-crm (Brevo & GrowthToolkit Unified Hub)
+                  growthtoolkit.io/app/deep-search-prospector
                 </span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span className="status-pill status-pill-done" style={{ fontSize: '0.75rem' }}>
-                  System Active
-                </span>
-              </div>
+              <span className="status-pill status-pill-done" style={{ fontSize: '0.75rem' }}>
+                Triple Verified Engine
+              </span>
             </div>
 
-            {/* Metrics Counter Grid */}
+            {/* Quick Metrics Bar */}
             <div style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
               gap: '1.25rem'
             }}>
-              {/* Metric 1 */}
-              <div style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                padding: '1.25rem',
-                borderRadius: 'var(--radius-md)',
-                border: '1px solid var(--border-color)'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Transactional & Email Volume</span>
-                  <Mail size={18} color="var(--accent-emerald)" />
-                </div>
-                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                  4.2M / mo
-                </div>
-                <span style={{ fontSize: '0.75rem', color: '#34D399', display: 'flex', alignItems: 'center', gap: '0.2rem', marginTop: '0.25rem' }}>
-                  <TrendingUp size={12} /> 99.82% Postmark SMTP Delivery
-                </span>
+              <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Verified B2B Leads</div>
+                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)', margin: '0.3rem 0' }}>250M+</div>
+                <span style={{ fontSize: '0.75rem', color: '#34D399' }}>✔ Real-time SMTP Checked</span>
               </div>
 
-              {/* Metric 2 */}
-              <div style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                padding: '1.25rem',
-                borderRadius: 'var(--radius-md)',
-                border: '1px solid var(--border-color)'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Verified B2B Prospect Leads</span>
-                  <Search size={18} color="var(--accent-indigo)" />
-                </div>
-                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                  250,000+
-                </div>
-                <span style={{ fontSize: '0.75rem', color: '#818CF8', display: 'flex', alignItems: 'center', gap: '0.2rem', marginTop: '0.25rem' }}>
-                  <TrendingUp size={12} /> Real-Time SMTP Verification Passed
-                </span>
+              <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Bounce Rate</div>
+                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)', margin: '0.3rem 0' }}>&lt; 2.5%</div>
+                <span style={{ fontSize: '0.75rem', color: '#60A5FA' }}>✔ Catch-all Validation</span>
               </div>
 
-              {/* Metric 3 */}
-              <div style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                padding: '1.25rem',
-                borderRadius: 'var(--radius-md)',
-                border: '1px solid var(--border-color)'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>AI Brand Safety Score</span>
-                  <Bot size={18} color="var(--accent-violet)" />
-                </div>
-                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                  100% Passed
-                </div>
-                <span style={{ fontSize: '0.75rem', color: '#A78BFA', display: 'flex', alignItems: 'center', gap: '0.2rem', marginTop: '0.25rem' }}>
-                  <ShieldCheck size={12} /> Mandatory Brand Voice Safety Gate
-                </span>
+              <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Pay-As-You-Go Credits</div>
+                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)', margin: '0.3rem 0' }}>$0.03 / lead</div>
+                <span style={{ fontSize: '0.75rem', color: '#A78BFA' }}>✔ Credits Never Expire</span>
               </div>
 
-              {/* Metric 4 */}
-              <div style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                padding: '1.25rem',
-                borderRadius: 'var(--radius-md)',
-                border: '1px solid var(--border-color)'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>GEO & AEO Search Index</span>
-                  <Search size={18} color="var(--accent-cyan)" />
-                </div>
-                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)' }}>
-                  Top #1 Position
-                </div>
-                <span style={{ fontSize: '0.75rem', color: '#22D3EE', display: 'flex', alignItems: 'center', gap: '0.2rem', marginTop: '0.25rem' }}>
-                  <TrendingUp size={12} /> Answer Engine Optimization
-                </span>
+              <div style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-color)' }}>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Email Campaign Deliverability</div>
+                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-primary)', margin: '0.3rem 0' }}>99.82%</div>
+                <span style={{ fontSize: '0.75rem', color: '#22D3EE' }}>✔ Postmark SMTP Pipeline</span>
               </div>
             </div>
           </div>

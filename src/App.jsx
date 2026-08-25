@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ProductSuiteTabs from './components/ProductSuiteTabs';
+import ToolkitFeatureGrid from './components/ToolkitFeatureGrid';
 import LeadFinderSandbox from './components/LeadFinderSandbox';
+import ProductSuiteTabs from './components/ProductSuiteTabs';
+import CompetitorComparison from './components/CompetitorComparison';
 import EngineShowcase from './components/EngineShowcase';
 import AISimulator from './components/AISimulator';
 import GrowthCalculator from './components/GrowthCalculator';
-import CompetitorComparison from './components/CompetitorComparison';
 import RoadmapMatrix from './components/RoadmapMatrix';
 import PricingSection from './components/PricingSection';
 import Testimonials from './components/Testimonials';
@@ -29,21 +30,22 @@ export default function App() {
 
   return (
     <div style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', minHeight: '100vh' }}>
-      {/* Announcement Bar at very top */}
+      {/* Top Banner Notice */}
       <AnnouncementBar openBookingModal={() => setIsBookingOpen(true)} />
 
-      {/* Sticky Header Navigation */}
+      {/* GrowthToolkit Sticky Header */}
       <Navbar 
         theme={theme} 
         toggleTheme={toggleTheme} 
         openBookingModal={() => setIsBookingOpen(true)} 
       />
 
-      {/* Main Page Layout Flow */}
+      {/* Main GrowthToolkit.io Identical Page Flow */}
       <main>
         <Hero openBookingModal={() => setIsBookingOpen(true)} />
-        <ProductSuiteTabs openBookingModal={() => setIsBookingOpen(true)} />
         <LeadFinderSandbox />
+        <ToolkitFeatureGrid openBookingModal={() => setIsBookingOpen(true)} />
+        <ProductSuiteTabs openBookingModal={() => setIsBookingOpen(true)} />
         <CompetitorComparison openBookingModal={() => setIsBookingOpen(true)} />
         <EngineShowcase />
         <AISimulator />
@@ -57,7 +59,7 @@ export default function App() {
       {/* Footer */}
       <Footer openBookingModal={() => setIsBookingOpen(true)} />
 
-      {/* Booking & Self-Service Registration Modal */}
+      {/* Signup & Demo Modal */}
       <BookingModal 
         isOpen={isBookingOpen} 
         onClose={() => setIsBookingOpen(false)} 
