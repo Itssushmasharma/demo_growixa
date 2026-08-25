@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ProductSuiteTabs from './components/ProductSuiteTabs';
+import LeadFinderSandbox from './components/LeadFinderSandbox';
 import EngineShowcase from './components/EngineShowcase';
 import AISimulator from './components/AISimulator';
-import RoadmapMatrix from './components/RoadmapMatrix';
 import GrowthCalculator from './components/GrowthCalculator';
+import CompetitorComparison from './components/CompetitorComparison';
+import RoadmapMatrix from './components/RoadmapMatrix';
 import PricingSection from './components/PricingSection';
 import Testimonials from './components/Testimonials';
+import FAQAccordion from './components/FAQAccordion';
 import BookingModal from './components/BookingModal';
 import Footer from './components/Footer';
 
@@ -24,6 +29,9 @@ export default function App() {
 
   return (
     <div style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', minHeight: '100vh' }}>
+      {/* Announcement Bar at very top */}
+      <AnnouncementBar openBookingModal={() => setIsBookingOpen(true)} />
+
       {/* Sticky Header Navigation */}
       <Navbar 
         theme={theme} 
@@ -31,15 +39,19 @@ export default function App() {
         openBookingModal={() => setIsBookingOpen(true)} 
       />
 
-      {/* Main Content Sections */}
+      {/* Main Page Layout Flow */}
       <main>
         <Hero openBookingModal={() => setIsBookingOpen(true)} />
+        <ProductSuiteTabs openBookingModal={() => setIsBookingOpen(true)} />
+        <LeadFinderSandbox />
+        <CompetitorComparison openBookingModal={() => setIsBookingOpen(true)} />
         <EngineShowcase />
         <AISimulator />
         <GrowthCalculator openBookingModal={() => setIsBookingOpen(true)} />
         <RoadmapMatrix />
         <PricingSection openBookingModal={() => setIsBookingOpen(true)} />
         <Testimonials />
+        <FAQAccordion />
       </main>
 
       {/* Footer */}

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GROWIXA AI PLATFORM - DESIGN SYSTEM & GLOBAL STYLES
+   GROWIXA AI PLATFORM - DESIGN SYSTEM & GLOBAL STYLES (BREVO & GROWTHTOOLKIT EDITION)
    ========================================================================== */
 
 :root {
@@ -8,7 +8,7 @@
   --bg-secondary: #0F172A;
   --bg-card: rgba(15, 23, 42, 0.75);
   --bg-card-hover: rgba(30, 41, 59, 0.85);
-  --bg-glass: rgba(15, 23, 42, 0.6);
+  --bg-glass: rgba(15, 23, 42, 0.75);
   
   --border-color: rgba(255, 255, 255, 0.08);
   --border-color-glow: rgba(16, 185, 129, 0.3);
@@ -25,6 +25,7 @@
   --accent-violet: #8B5CF6;
   --accent-cyan: #06B6D4;
   --accent-amber: #F59E0B;
+  --accent-rose: #F43F5E;
   
   --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -45,9 +46,9 @@
 [data-theme="light"] {
   --bg-primary: #F8FAFC;
   --bg-secondary: #FFFFFF;
-  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-card: rgba(255, 255, 255, 0.9);
   --bg-card-hover: rgba(241, 245, 249, 0.95);
-  --bg-glass: rgba(255, 255, 255, 0.75);
+  --bg-glass: rgba(255, 255, 255, 0.85);
   
   --border-color: rgba(0, 0, 0, 0.08);
   --border-color-glow: rgba(16, 185, 129, 0.4);
@@ -82,7 +83,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Background Ambient Glows & Grid Pattern */
+/* Announcement Top Bar */
+.announcement-bar {
+  background: linear-gradient(90deg, #059669 0%, #10B981 50%, #4F46E5 100%);
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 1001;
+}
+
+.announcement-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+/* Ambient Glows & Grid Pattern */
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image: 
@@ -290,6 +317,33 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
 }
 
+/* Accordion Component Styles */
+.accordion-item {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.accordion-header {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.accordion-body {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 /* Scrollbar Customization */
 ::-webkit-scrollbar {
   width: 8px;
@@ -319,24 +373,10 @@ h1, h2, h3, h4, h5, h6 {
   animation: fadeIn 0.4s ease forwards;
 }
 
-/* Keyframes for shine effect */
-@keyframes shine {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
-.shine-effect {
-  position: relative;
-  overflow: hidden;
-}
-
-.shine-effect::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  animation: shine 3s infinite;
+.animate-spin {
+  animation: spin 1s linear infinite;
 }

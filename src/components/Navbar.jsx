@@ -4,13 +4,10 @@ import {
   Sun, 
   Moon, 
   Sparkles, 
-  Sliders, 
-  Layers, 
-  Calendar, 
-  ShieldCheck, 
   ChevronRight,
   Menu,
-  X
+  X,
+  Search
 } from 'lucide-react';
 
 export default function Navbar({ theme, toggleTheme, openBookingModal }) {
@@ -29,7 +26,7 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
     <nav 
       style={{
         position: 'fixed',
-        top: 0,
+        top: '35px',
         left: 0,
         right: 0,
         zIndex: 1000,
@@ -40,7 +37,7 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
         WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
         borderBottom: scrolled ? '1px solid var(--border-color)' : '1px solid transparent',
         transition: 'all 0.3s ease',
-        padding: scrolled ? '0.85rem 0' : '1.25rem 0'
+        padding: scrolled ? '0.85rem 0' : '1.1rem 0'
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
@@ -65,11 +62,11 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
                 GROWIXA
               </span>
               <span className="status-pill status-pill-done" style={{ padding: '0.15rem 0.5rem', fontSize: '0.65rem' }}>
-                v2.4 Roadmap
+                Brevo & Growth Suite
               </span>
             </div>
             <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginTop: '-2px' }}>
-              AI Growth & Automation Platform
+              Autonomous AI Growth Platform
             </span>
           </div>
         </a>
@@ -81,20 +78,23 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
           gap: '2rem',
           '@media (min-width: 992px)': { display: 'flex' }
         }} className="desktop-nav">
-          <a href="#engines" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            Platform Engines
+          <a href="#suites" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+            Product Suites
           </a>
-          <a href="#ai-composer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+          <a href="#prospecting" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+            B2B Prospecting
+          </a>
+          <a href="#engines" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+            Engine Catalog
+          </a>
+          <a href="#ai-composer" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
             AI Sandbox
           </a>
-          <a href="#calculator" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            ROI Calculator
-          </a>
-          <a href="#roadmap" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
-            Release Matrix
-          </a>
-          <a href="#pricing" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 500, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+          <a href="#pricing" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
             SaaS Pricing
+          </a>
+          <a href="#faq" style={{ color: 'var(--text-secondary)', textDecoration: 'none', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--accent-emerald)'} onMouseOut={e => e.target.style.color = 'var(--text-secondary)'}>
+            FAQ
           </a>
         </div>
 
@@ -128,7 +128,7 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
             style={{ padding: '0.6rem 1.25rem', fontSize: '0.9rem' }}
           >
             <Sparkles size={16} />
-            <span>Launch Platform</span>
+            <span>Try Free</span>
           </button>
 
           {/* Mobile Menu Toggle */}
@@ -159,11 +159,12 @@ export default function Navbar({ theme, toggleTheme, openBookingModal }) {
           flexDirection: 'column',
           gap: '1rem'
         }}>
-          <a href="#engines" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Platform Engines</a>
+          <a href="#suites" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Product Suites</a>
+          <a href="#prospecting" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>B2B Prospecting</a>
+          <a href="#engines" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Engine Catalog</a>
           <a href="#ai-composer" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>AI Sandbox</a>
-          <a href="#calculator" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>ROI Calculator</a>
-          <a href="#roadmap" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>Release Matrix</a>
           <a href="#pricing" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>SaaS Pricing</a>
+          <a href="#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600 }}>FAQ</a>
         </div>
       )}
     </nav>
