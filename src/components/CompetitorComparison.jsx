@@ -6,7 +6,7 @@ export default function CompetitorComparison({ openBookingModal }) {
     {
       feature: 'High-Deliverability SMTP (Postmark/Fernet)',
       growixa: true,
-      brevo: true,
+      legacy: true,
       mailchimp: false,
       apollo: false,
       note: '99.8% inbox placement'
@@ -14,7 +14,7 @@ export default function CompetitorComparison({ openBookingModal }) {
     {
       feature: 'B2B Lead Prospecting & SMTP Email Finder',
       growixa: true,
-      brevo: false,
+      legacy: false,
       mailchimp: false,
       apollo: true,
       note: 'GrowthToolkit Deep Search'
@@ -22,7 +22,7 @@ export default function CompetitorComparison({ openBookingModal }) {
     {
       feature: 'AI Brand Voice & Mandatory Safety Approvals',
       growixa: true,
-      brevo: false,
+      legacy: false,
       mailchimp: false,
       apollo: false,
       note: 'GRX-FEAT-022 Brand Rules'
@@ -30,7 +30,7 @@ export default function CompetitorComparison({ openBookingModal }) {
     {
       feature: 'Omnichannel SMS & WhatsApp Meta Cloud API',
       growixa: true,
-      brevo: true,
+      legacy: true,
       mailchimp: false,
       apollo: false,
       note: 'GSM-7 Segment Calculator'
@@ -38,7 +38,7 @@ export default function CompetitorComparison({ openBookingModal }) {
     {
       feature: 'Generative Search & Answer Engine (GEO/AEO)',
       growixa: true,
-      brevo: false,
+      legacy: false,
       mailchimp: false,
       apollo: false,
       note: 'AI Search Engine Rank Engine'
@@ -46,7 +46,7 @@ export default function CompetitorComparison({ openBookingModal }) {
     {
       feature: 'Strict DB Multi-Tenant Data Isolation (`account_id`)',
       growixa: true,
-      brevo: true,
+      legacy: true,
       mailchimp: false,
       apollo: false,
       note: 'Sprint 5 Security Spec'
@@ -54,7 +54,7 @@ export default function CompetitorComparison({ openBookingModal }) {
     {
       feature: 'Pay-As-You-Go Wallet & Credit Rollover',
       growixa: true,
-      brevo: false,
+      legacy: false,
       mailchimp: false,
       apollo: true,
       note: 'No long-term contract lock-in'
@@ -88,7 +88,7 @@ export default function CompetitorComparison({ openBookingModal }) {
                     <Zap size={20} /> GROWIXA
                   </div>
                 </th>
-                <th style={{ padding: '1.25rem 1rem', textAlign: 'center', color: 'var(--text-secondary)' }}>Brevo</th>
+                <th style={{ padding: '1.25rem 1rem', textAlign: 'center', color: 'var(--text-secondary)' }}>Legacy Platforms</th>
                 <th style={{ padding: '1.25rem 1rem', textAlign: 'center', color: 'var(--text-secondary)' }}>Mailchimp</th>
                 <th style={{ padding: '1.25rem 1rem', textAlign: 'center', color: 'var(--text-secondary)' }}>Apollo.io</th>
               </tr>
@@ -108,9 +108,9 @@ export default function CompetitorComparison({ openBookingModal }) {
                     </div>
                   </td>
 
-                  {/* Brevo Column */}
+                  {/* Legacy Column */}
                   <td style={{ padding: '1.1rem 1rem', textAlign: 'center' }}>
-                    {row.brevo ? (
+                    {row.legacy ? (
                       <div style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.08)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-secondary)' }}>
                         <Check size={16} />
                       </div>

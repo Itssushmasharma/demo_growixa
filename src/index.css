@@ -1,9 +1,9 @@
 /* ==========================================================================
-   GROWIXA AI PLATFORM - BREVO.COM EXACT VISUAL CLONE DESIGN SYSTEM
+   GROWIXA AI PLATFORM - DESIGN SYSTEM
    ========================================================================== */
 
 :root {
-  /* Color Palette - Brevo Sage Green Theme */
+  /* Color Palette - Growixa Sage Green Theme */
   --bg-primary: #FFFFFF;
   --bg-hero: #E6F4EA;
   --bg-hero-accent: #D1E7DD;
@@ -18,7 +18,7 @@
   --text-secondary: #4B5563;
   --text-muted: #6B7280;
   
-  /* Brevo Brand Colors */
+  /* Growixa Brand Colors */
   --brand-green: #0B996E;
   --brand-green-hover: #087554;
   --brand-black: #111827;
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 1.5rem;
 }
 
-/* Brevo Card Style */
+/* Growixa Card Style */
 .glass-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(11, 153, 110, 0.3);
 }
 
-/* Brevo Buttons (Black Solid & Outline Match) */
+/* Growixa Buttons */
 .btn-primary {
   background: #111827;
   color: #FFFFFF;
