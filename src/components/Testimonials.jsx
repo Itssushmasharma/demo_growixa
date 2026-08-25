@@ -13,22 +13,22 @@ export default function Testimonials() {
   const reviews = [
     {
       quote: "Growixa's Postmark Fernet integration boosted our email inbox placement from 84% to 99.8%. We saw an immediate 3.4x spike in qualified pipeline sales within 30 days.",
-      author: "Sarah Jenkins",
-      role: "VP of Growth, TechScale SaaS",
+      author: "Priya Sharma",
+      role: "VP of Growth, TechScale India & APAC",
       metric: "+340% Revenue Increase",
       rating: 5
     },
     {
       quote: "The rule-based audience segment builder and automated GDPR consent suppression saved us over 15 hours a week in manual CRM scrubbing. Essential for scaling B2B marketing.",
-      author: "David Vance",
+      author: "Rohan Malhotra",
       role: "Head of Marketing, FinFlow Intelligence",
       metric: "15 hrs/wk Saved",
       rating: 5
     },
     {
       quote: "Growixa's AI Brand Voice Safety Engine gave our executive management total confidence. Every single generated social post and email subject line is verified before going live.",
-      author: "Elena Rostova",
-      role: "Chief Brand Officer, HealthPulse",
+      author: "Ananya Roy",
+      role: "Chief Brand Officer, HealthPulse Digital",
       metric: "100% Brand Compliance",
       rating: 5
     }
@@ -43,7 +43,7 @@ export default function Testimonials() {
             Verified Client Success
           </span>
           <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', marginTop: '0.5rem', marginBottom: '1rem' }}>
-            Trusted by Growth Leaders <span className="gradient-text">& SaaS Pioneers</span>
+            Trusted by Indian Growth Leaders <span className="gradient-text">& Global SaaS Pioneers</span>
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
             Discover how marketing engineering teams rely on Growixa to scale high-deliverability campaigns.
@@ -119,16 +119,17 @@ export default function Testimonials() {
           flexWrap: 'wrap',
           opacity: 0.75
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
-            <Zap size={20} color="var(--accent-emerald)" /> Postmark Premier SMTP Partner
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            <Building2 size={18} /> TechScale APAC
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
-            <Building2 size={20} color="var(--accent-indigo)" /> Twilio Verified Bulk SMS Engine
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            <Building2 size={18} /> FinFlow India
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
-            <ShieldCheck size={20} color="var(--accent-violet)" /> Argon2id Security Standard
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 700, fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            <Building2 size={18} /> HealthPulse Digital
           </div>
         </div>
+
       </div>
     </section>
   );
