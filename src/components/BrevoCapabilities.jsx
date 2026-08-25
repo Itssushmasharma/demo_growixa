@@ -106,7 +106,7 @@ export default function BrevoCapabilities({ openBookingModal }) {
         {/* Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 3.5rem auto' }}>
           <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#0B996E' }}>
-            Brevo Platform Capabilities
+            Growixa Platform Capabilities
           </span>
           <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', marginTop: '0.5rem', marginBottom: '1rem' }}>
             Everything You Need to <span style={{ color: '#0B996E' }}>Grow Your Business</span>
@@ -159,7 +159,7 @@ export default function BrevoCapabilities({ openBookingModal }) {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem', alignItems: 'center' }}>
               <div>
                 <span className="status-pill status-pill-done" style={{ fontSize: '0.75rem', marginBottom: '0.75rem' }}>
-                  Brevo Core Capability
+                  Growixa Core Capability
                 </span>
                 <h3 style={{ fontSize: '1.85rem', fontWeight: 800, marginBottom: '0.75rem', lineHeight: 1.2 }}>
                   {current.headline}

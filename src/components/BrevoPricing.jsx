@@ -98,7 +98,7 @@ export default function BrevoPricing({ openBookingModal }) {
         {/* Header (Matching Photo 1) */}
         <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 3rem auto' }}>
           <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#0B996E' }}>
-            Brevo Official Pricing Matrix (brevo.com/pricing/)
+            Growixa Official Pricing Matrix (growixa.com/pricing/)
           </span>
           <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', marginTop: '0.5rem', marginBottom: '1rem' }}>
             Simple, Predictable <span style={{ color: '#0B996E' }}>Plans for Every Stage</span>
@@ -419,7 +419,7 @@ export default function BrevoPricing({ openBookingModal }) {
                 <div>✓ Basic reporting & analytics</div>
                 <div>✓ 24/7 Email support</div>
                 <div style={{ color: '#6B7280', fontSize: '0.775rem', marginTop: '0.5rem', borderTop: '1px solid #F3F4F6', paddingTop: '0.5rem' }}>
-                  ⊞ No Brevo logo (+{formatPrice(brandingCost)}/mo)
+                  ⊞ No Growixa logo (+{formatPrice(brandingCost)}/mo)
                 </div>
               </div>
             </div>
@@ -436,7 +436,7 @@ export default function BrevoPricing({ openBookingModal }) {
                 <div style={{ color: '#0B996E', fontWeight: 700 }}>◆ AI Send Time Optimization</div>
                 <div>✓ Web & event tracking</div>
                 <div>✓ Landing pages (1 page included)</div>
-                <div style={{ fontWeight: 700, color: '#0B996E' }}>✓ No Brevo/Growixa logo</div>
+                <div style={{ fontWeight: 700, color: '#0B996E' }}>✓ No Growixa logo</div>
                 <div>✓ Phone & live chat support</div>
               </div>
             </div>
@@ -466,7 +466,7 @@ export default function BrevoPricing({ openBookingModal }) {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.7rem', fontSize: '0.85rem', color: '#374151' }}>
                 <div>✓ Multi-account management</div>
                 <div>✓ Custom database objects</div>
-                <div>✓ Brevo / Growixa Mobile Wallet</div>
+                <div>✓ Growixa Mobile Wallet</div>
                 <div>✓ Custom loyalty engine</div>
                 <div>✓ Custom data integrations</div>
                 <div>✓ Dedicated IP address</div>

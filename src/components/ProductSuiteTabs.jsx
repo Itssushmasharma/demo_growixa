@@ -23,7 +23,7 @@ export default function ProductSuiteTabs({ openBookingModal }) {
     {
       id: 'marketing',
       title: 'Marketing Platform Suite',
-      badge: 'Brevo-Style Campaign Engine',
+      badge: 'Growixa Multi-Channel Engine',
       icon: Mail,
       color: '#10B981',
       tagline: 'Connect across every customer touchpoint with unified campaign intelligence.',
@@ -106,7 +106,7 @@ export default function ProductSuiteTabs({ openBookingModal }) {
             5 Integrated <span className="gradient-text">Growth Platforms in One</span>
           </h2>
           <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
-            Replace 5 separate subscriptions (Brevo, Mailchimp, Apollo, Hubspot, Twilio) with Growixa's unified engine.
+            Replace 5 separate subscriptions (Mailchimp, Apollo, Hubspot, Twilio, Postmark) with Growixa's unified engine.
           </p>
         </div>
 
