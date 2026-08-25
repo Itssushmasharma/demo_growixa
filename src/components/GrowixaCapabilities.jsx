@@ -14,7 +14,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 
-export default function BrevoCapabilities({ openBookingModal }) {
+export default function GrowixaCapabilities({ openBookingModal }) {
   const [activeCap, setActiveCap] = useState('campaigns');
 
   const capabilities = [

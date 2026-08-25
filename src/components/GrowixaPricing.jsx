@@ -11,7 +11,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 
-export default function BrevoPricing({ openBookingModal }) {
+export default function GrowixaPricing({ openBookingModal }) {
   const [annualBilling, setAnnualBilling] = useState(true);
   const [currency, setCurrency] = useState('INR'); // 'INR' or 'USD'
   const [activePlanTab, setActivePlanTab] = useState('Starter');
@@ -95,7 +95,7 @@ export default function BrevoPricing({ openBookingModal }) {
     <section id="pricing" style={{ padding: '6rem 0', background: 'var(--bg-primary)' }}>
       <div className="container">
         
-        {/* Header (Matching Photo 1) */}
+        {/* Header */}
         <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 3rem auto' }}>
           <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#0B996E' }}>
             Growixa Official Pricing Matrix (growixa.com/pricing/)
@@ -107,7 +107,7 @@ export default function BrevoPricing({ openBookingModal }) {
             Pay for the emails you send, not the size of your contact list. Unused capacity rolls over smoothly.
           </p>
 
-          {/* Top Banner Card (Photo 1 Exact Match) */}
+          {/* Top Banner Card */}
           <div style={{
             background: 'var(--bg-hero)',
             borderRadius: '16px',
@@ -141,7 +141,7 @@ export default function BrevoPricing({ openBookingModal }) {
             </div>
           </div>
 
-          {/* Billing Switcher & Currency Selector (Photo 1 & Photo 2 Match) */}
+          {/* Billing Switcher & Currency Selector */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
@@ -211,7 +211,7 @@ export default function BrevoPricing({ openBookingModal }) {
           </div>
         </div>
 
-        {/* 4 Plan Cards Summary (Photo 2 Exact Match) */}
+        {/* 4 Plan Cards Summary */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', marginBottom: '4rem', alignItems: 'stretch' }}>
           {plans.map((p, idx) => {
             const pPrice = basePrices[currency][p.name];
@@ -256,14 +256,14 @@ export default function BrevoPricing({ openBookingModal }) {
           })}
         </div>
 
-        {/* Interactive Monthly Email Volume Slider Calculator (Photos 4 & 5 Exact Match) */}
+        {/* Interactive Monthly Email Volume Slider Calculator */}
         <div className="glass-card" style={{ padding: '2.5rem', borderRadius: '20px', border: '1px solid rgba(11, 153, 110, 0.3)', marginBottom: '5rem', background: '#FFFFFF', boxShadow: '0 15px 35px rgba(0, 0, 0, 0.05)' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3rem', alignItems: 'center' }}>
             
             {/* Left Column: Slider Controls */}
             <div>
               <span className="status-pill status-pill-done" style={{ fontSize: '0.75rem', marginBottom: '0.75rem' }}>
-                Interactive Price Calculator (Photo 4 & 5 Match)
+                Interactive Price Calculator
               </span>
               
               {/* Plan Tabs */}
@@ -337,7 +337,7 @@ export default function BrevoPricing({ openBookingModal }) {
               </div>
             </div>
 
-            {/* Right Column: Live Plan Calculator Summary Card (Photo 4 & 5 Exact Match) */}
+            {/* Right Column: Live Plan Calculator Summary Card */}
             <div style={{
               background: '#F9FAFB',
               border: '1px solid #E5E7EB',
@@ -390,7 +390,7 @@ export default function BrevoPricing({ openBookingModal }) {
           </div>
         </div>
 
-        {/* Detailed 4-Column Feature Comparison Checklist (Photo 3 Exact Match) */}
+        {/* Detailed 4-Column Feature Comparison Checklist */}
         <div id="checklist" style={{ marginTop: '5rem' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h3 style={{ fontSize: '2rem', fontWeight: 800, color: '#111827' }}>
@@ -403,7 +403,7 @@ export default function BrevoPricing({ openBookingModal }) {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', alignItems: 'stretch' }}>
             
-            {/* Column 1: Starter Checklist (Photo 3 Match) */}
+            {/* Column 1: Starter Checklist */}
             <div className="glass-card" style={{ padding: '1.75rem', borderRadius: '16px', background: '#FFFFFF' }}>
               <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '1rem' }}>
                 Features included in Starter:
@@ -424,7 +424,7 @@ export default function BrevoPricing({ openBookingModal }) {
               </div>
             </div>
 
-            {/* Column 2: Standard Checklist (Photo 3 Match) */}
+            {/* Column 2: Standard Checklist */}
             <div className="glass-card" style={{ padding: '1.75rem', borderRadius: '16px', background: '#FFFFFF', border: '2px solid #0B996E' }}>
               <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '1rem' }}>
                 Everything in Starter, plus:
@@ -441,7 +441,7 @@ export default function BrevoPricing({ openBookingModal }) {
               </div>
             </div>
 
-            {/* Column 3: Professional Checklist (Photo 3 Match) */}
+            {/* Column 3: Professional Checklist */}
             <div className="glass-card" style={{ padding: '1.75rem', borderRadius: '16px', background: '#FFFFFF' }}>
               <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '1rem' }}>
                 Everything in Standard, plus:
@@ -458,7 +458,7 @@ export default function BrevoPricing({ openBookingModal }) {
               </div>
             </div>
 
-            {/* Column 4: Enterprise Checklist (Photo 3 Match) */}
+            {/* Column 4: Enterprise Checklist */}
             <div className="glass-card" style={{ padding: '1.75rem', borderRadius: '16px', background: '#FFFFFF' }}>
               <h4 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#111827', marginBottom: '1rem' }}>
                 Everything in Professional, plus:

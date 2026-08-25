@@ -12,7 +12,7 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
-export default function BrevoHero({ openBookingModal }) {
+export default function GrowixaHero({ openBookingModal }) {
   return (
     <section style={{
       position: 'relative',
@@ -24,7 +24,7 @@ export default function BrevoHero({ openBookingModal }) {
       <div className="container">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3.5rem', alignItems: 'center' }}>
           
-          {/* Left Column: Headline & Action Buttons (Photo 1 Match) */}
+          {/* Left Column: Headline & Action Buttons */}
           <div>
             <h1 style={{
               fontSize: 'clamp(2.75rem, 5vw, 4.25rem)',
@@ -65,7 +65,7 @@ export default function BrevoHero({ openBookingModal }) {
               </button>
             </div>
 
-            {/* Social Rating Proof (Photo 1 Match) */}
+            {/* Social Rating Proof */}
             <div>
               <div style={{ fontSize: '0.875rem', color: '#6B7280', marginBottom: '0.35rem', fontWeight: 600 }}>
                 Loved by users everywhere
@@ -81,7 +81,7 @@ export default function BrevoHero({ openBookingModal }) {
             </div>
           </div>
 
-          {/* Right Column: Brevo App Dashboard Mockup (Photo 1 Match) */}
+          {/* Right Column: Growixa App Dashboard Mockup */}
           <div style={{ position: 'relative' }}>
             <div style={{
               background: '#FFFFFF',
@@ -97,7 +97,7 @@ export default function BrevoHero({ openBookingModal }) {
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#EF4444' }} />
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#F59E0B' }} />
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10B981' }} />
-                  <span style={{ fontSize: '0.85rem', color: '#6B7280', fontWeight: 600, marginLeft: '0.5rem' }}>Hello Adrian</span>
+                  <span style={{ fontSize: '0.85rem', color: '#6B7280', fontWeight: 600, marginLeft: '0.5rem' }}>Growixa Platform Console</span>
                 </div>
                 <span className="status-pill status-pill-done" style={{ fontSize: '0.7rem' }}>
                   Live Data Platform

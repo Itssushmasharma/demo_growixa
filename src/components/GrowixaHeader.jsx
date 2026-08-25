@@ -22,10 +22,9 @@ import {
   Sparkles
 } from 'lucide-react';
 
-export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
+export default function GrowixaHeader({ theme, toggleTheme, openBookingModal }) {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +54,7 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
       onMouseLeave={() => setActiveDropdown(null)}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Brand Logo - Brevo Style Format */}
+        {/* Brand Logo - Growixa Format */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
           <div style={{
             width: '36px',
@@ -74,16 +73,10 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
           </span>
         </a>
 
-        {/* Desktop Mega-Menu Nav Items (Matching Photos 2, 3, 4) */}
-        <div style={{ 
-          display: 'none', 
-          alignItems: 'center', 
-          gap: '2.25rem',
-          position: 'relative',
-          '@media (min-width: 992px)': { display: 'flex' }
-        }} className="desktop-nav">
+        {/* Desktop Navigation Items */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2.25rem', position: 'relative' }}>
           
-          {/* Menu Item 1: Platform Dropdown (Photo 2 Exact Match) */}
+          {/* Menu Item 1: Platform Dropdown */}
           <div 
             onMouseEnter={() => setActiveDropdown('platform')}
             style={{ position: 'relative', padding: '0.5rem 0', cursor: 'pointer' }}
@@ -105,7 +98,7 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
               <ChevronDown size={16} style={{ transform: activeDropdown === 'platform' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
             </button>
 
-            {/* Photo 2 Dropdown Panel: Capabilities & Channels */}
+            {/* Dropdown Panel: Capabilities & Channels */}
             {activeDropdown === 'platform' && (
               <div className="mega-menu-panel animate-fade-in" style={{ minWidth: '760px', left: '100px' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '2rem' }}>
@@ -167,7 +160,7 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
             )}
           </div>
 
-          {/* Menu Item 2: Solutions Dropdown (Photo 3 Exact Match) */}
+          {/* Menu Item 2: Solutions Dropdown */}
           <div 
             onMouseEnter={() => setActiveDropdown('solutions')}
             style={{ position: 'relative', padding: '0.5rem 0', cursor: 'pointer' }}
@@ -189,7 +182,7 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
               <ChevronDown size={16} style={{ transform: activeDropdown === 'solutions' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
             </button>
 
-            {/* Photo 3 Dropdown Panel */}
+            {/* Dropdown Panel */}
             {activeDropdown === 'solutions' && (
               <div className="mega-menu-panel animate-fade-in" style={{ minWidth: '420px', left: '50%' }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.15rem' }}>
@@ -219,12 +212,12 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
             )}
           </div>
 
-          {/* Menu Item 3: Pricing Link (Photo 5 Match) */}
+          {/* Menu Item 3: Pricing Link */}
           <a href="#pricing" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600, fontSize: '0.95rem' }}>
             Pricing
           </a>
 
-          {/* Menu Item 4: Resources Dropdown (Photo 4 Exact Match) */}
+          {/* Menu Item 4: Resources Dropdown */}
           <div 
             onMouseEnter={() => setActiveDropdown('resources')}
             style={{ position: 'relative', padding: '0.5rem 0', cursor: 'pointer' }}
@@ -246,7 +239,7 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
               <ChevronDown size={16} style={{ transform: activeDropdown === 'resources' ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }} />
             </button>
 
-            {/* Photo 4 Dropdown Panel */}
+            {/* Dropdown Panel */}
             {activeDropdown === 'resources' && (
               <div className="mega-menu-panel animate-fade-in" style={{ minWidth: '650px', left: '-50px' }}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1.5rem' }}>
@@ -282,13 +275,12 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
 
         </div>
 
-        {/* Right Header CTAs (Photo 1 Exact Match) */}
+        {/* Right Header CTAs */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a href="#" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
             Log in
           </a>
 
-          {/* Black Primary Button */}
           <button 
             onClick={openBookingModal}
             className="btn-primary"
@@ -297,7 +289,6 @@ export default function BrevoHeader({ theme, toggleTheme, openBookingModal }) {
             <span>Sign Up Free</span>
           </button>
 
-          {/* Green Outline Secondary Button */}
           <button 
             onClick={openBookingModal}
             className="btn-secondary"

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import BrevoHeader from './components/BrevoHeader';
-import BrevoHero from './components/BrevoHero';
-import BrevoCapabilities from './components/BrevoCapabilities';
-import BrevoPricing from './components/BrevoPricing';
+import GrowixaHeader from './components/GrowixaHeader';
+import GrowixaHero from './components/GrowixaHero';
+import GrowixaCapabilities from './components/GrowixaCapabilities';
+import GrowixaPricing from './components/GrowixaPricing';
 import LeadFinderSandbox from './components/LeadFinderSandbox';
 import CompetitorComparison from './components/CompetitorComparison';
 import AISimulator from './components/AISimulator';
@@ -27,25 +27,25 @@ export default function App() {
 
   return (
     <div style={{ background: 'var(--bg-primary)', color: 'var(--text-primary)', minHeight: '100vh' }}>
-      {/* Brevo Dropdown Navigation Header */}
-      <BrevoHeader 
+      {/* Growixa Dropdown Navigation Header */}
+      <GrowixaHeader 
         theme={theme} 
         toggleTheme={toggleTheme} 
         openBookingModal={() => setIsBookingOpen(true)} 
       />
 
-      {/* Main Brevo.com Exact Page Flow */}
+      {/* Main Page Flow */}
       <main>
-        {/* Brevo Sage Green Hero (Photo 1 Match) */}
-        <BrevoHero openBookingModal={() => setIsBookingOpen(true)} />
+        {/* Growixa Hero Section */}
+        <GrowixaHero openBookingModal={() => setIsBookingOpen(true)} />
 
-        {/* Brevo Core Capabilities Breakdown (Photo 2 Match) */}
-        <BrevoCapabilities openBookingModal={() => setIsBookingOpen(true)} />
+        {/* Growixa Core Capabilities Breakdown */}
+        <GrowixaCapabilities openBookingModal={() => setIsBookingOpen(true)} />
 
         {/* B2B Prospecting & SMTP Lead Verification Sandbox */}
         <LeadFinderSandbox />
 
-        {/* Competitor Comparison Matrix (Growixa vs Brevo vs Mailchimp vs Apollo) */}
+        {/* Competitor Comparison Matrix (Growixa vs Competitors) */}
         <CompetitorComparison openBookingModal={() => setIsBookingOpen(true)} />
 
         {/* AI Social & Email Content Simulator */}
@@ -57,8 +57,8 @@ export default function App() {
         {/* Roadmap Matrix */}
         <RoadmapMatrix />
 
-        {/* Brevo Exact Pricing Matrix (Photo 5 Match) */}
-        <BrevoPricing openBookingModal={() => setIsBookingOpen(true)} />
+        {/* Growixa Pricing Matrix */}
+        <GrowixaPricing openBookingModal={() => setIsBookingOpen(true)} />
 
         {/* Verified Testimonials */}
         <Testimonials />
