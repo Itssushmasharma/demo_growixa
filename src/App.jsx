@@ -7,7 +7,6 @@ import LeadFinderSandbox from './components/LeadFinderSandbox';
 import CompetitorComparison from './components/CompetitorComparison';
 import AISimulator from './components/AISimulator';
 import GrowthCalculator from './components/GrowthCalculator';
-import RoadmapMatrix from './components/RoadmapMatrix';
 import Testimonials from './components/Testimonials';
 import FAQAccordion from './components/FAQAccordion';
 import BookingModal from './components/BookingModal';
@@ -53,9 +52,6 @@ export default function App() {
 
         {/* ROI Growth Estimator */}
         <GrowthCalculator openBookingModal={() => setIsBookingOpen(true)} />
-
-        {/* Roadmap Matrix */}
-        <RoadmapMatrix />
 
         {/* Growixa Pricing Matrix */}
         <GrowixaPricing openBookingModal={() => setIsBookingOpen(true)} />
