@@ -16,21 +16,21 @@ export default function GrowixaHero({ openBookingModal }) {
   return (
     <section style={{
       position: 'relative',
-      paddingTop: '9.5rem',
-      paddingBottom: '6rem',
+      paddingTop: '8.5rem',
+      paddingBottom: '5rem',
       background: 'var(--bg-hero)',
       borderBottom: '1px solid var(--border-color)'
     }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '3.5rem', alignItems: 'center' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
           
           {/* Left Column: Headline & Action Buttons */}
           <div>
             <h1 style={{
-              fontSize: 'clamp(2.75rem, 5vw, 4.25rem)',
+              fontSize: 'clamp(2.25rem, 5vw, 4.25rem)',
               fontWeight: 800,
               lineHeight: 1.1,
-              marginBottom: '1.5rem',
+              marginBottom: '1.25rem',
               color: '#111827',
               letterSpacing: '-0.03em'
             }}>
@@ -38,20 +38,20 @@ export default function GrowixaHero({ openBookingModal }) {
             </h1>
 
             <p style={{
-              fontSize: 'clamp(1.1rem, 2vw, 1.25rem)',
+              fontSize: 'clamp(1rem, 2vw, 1.25rem)',
               color: '#4B5563',
-              marginBottom: '2.25rem',
+              marginBottom: '2rem',
               lineHeight: 1.6
             }}>
               One AI-powered customer platform for all your marketing and sales needs. From email marketing, SMS, WhatsApp, and beyond, drive business growth and lasting loyalty.
             </p>
 
-            {/* Action Buttons */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+            {/* Action Buttons (Full width on mobile) */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
               <button 
                 onClick={openBookingModal}
                 className="btn-primary"
-                style={{ padding: '0.95rem 2.25rem', fontSize: '1.05rem', borderRadius: '8px' }}
+                style={{ padding: '0.95rem 2rem', fontSize: '1rem', borderRadius: '8px', flex: '1 1 200px', justifyContent: 'center' }}
               >
                 <span>Sign up free</span>
               </button>
@@ -59,7 +59,7 @@ export default function GrowixaHero({ openBookingModal }) {
               <button 
                 onClick={openBookingModal}
                 className="btn-secondary"
-                style={{ padding: '0.95rem 2.25rem', fontSize: '1.05rem', borderRadius: '8px' }}
+                style={{ padding: '0.95rem 2rem', fontSize: '1rem', borderRadius: '8px', flex: '1 1 200px', justifyContent: 'center' }}
               >
                 <span>Watch live demo</span>
               </button>
@@ -87,59 +87,59 @@ export default function GrowixaHero({ openBookingModal }) {
               background: '#FFFFFF',
               borderRadius: '20px',
               border: '1px solid rgba(0, 0, 0, 0.08)',
-              padding: '1.75rem',
+              padding: '1.5rem',
               boxShadow: '0 20px 40px rgba(0, 0, 0, 0.08)',
               position: 'relative'
             }}>
               {/* Window Header */}
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid #F3F4F6' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem', paddingBottom: '0.75rem', borderBottom: '1px solid #F3F4F6' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#EF4444' }} />
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#F59E0B' }} />
                   <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#10B981' }} />
-                  <span style={{ fontSize: '0.85rem', color: '#6B7280', fontWeight: 600, marginLeft: '0.5rem' }}>Growixa Platform Console</span>
+                  <span style={{ fontSize: '0.8rem', color: '#6B7280', fontWeight: 600, marginLeft: '0.4rem' }}>Growixa Platform Console</span>
                 </div>
-                <span className="status-pill status-pill-done" style={{ fontSize: '0.7rem' }}>
+                <span className="status-pill status-pill-done" style={{ fontSize: '0.65rem' }}>
                   Live Data Platform
                 </span>
               </div>
 
               {/* Dashboard Content Mockup */}
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '1rem' }}>
                 
                 {/* Card 1: Summer Campaign */}
-                <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '1.25rem' }}>
-                  <div style={{ fontSize: '0.8rem', color: '#6B7280', marginBottom: '0.2rem' }}>Summer Collection Campaign</div>
-                  <div style={{ fontSize: '0.75rem', color: '#9CA3AF', marginBottom: '1rem' }}>Sent on June 27, 2026</div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', fontSize: '0.8rem' }}>
+                <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '1rem' }}>
+                  <div style={{ fontSize: '0.775rem', color: '#6B7280', marginBottom: '0.2rem' }}>Summer Collection Campaign</div>
+                  <div style={{ fontSize: '0.7rem', color: '#9CA3AF', marginBottom: '0.75rem' }}>Sent on June 27, 2026</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.5rem', fontSize: '0.775rem' }}>
                     <div>
-                      <span style={{ color: '#6B7280', display: 'block', fontSize: '0.7rem' }}>Delivered</span>
+                      <span style={{ color: '#6B7280', display: 'block', fontSize: '0.65rem' }}>Delivered</span>
                       <strong style={{ color: '#111827' }}>22,490</strong>
                     </div>
                     <div>
-                      <span style={{ color: '#6B7280', display: 'block', fontSize: '0.7rem' }}>Orders</span>
+                      <span style={{ color: '#6B7280', display: 'block', fontSize: '0.65rem' }}>Orders</span>
                       <strong style={{ color: '#0B996E' }}>30</strong>
                     </div>
                   </div>
                 </div>
 
                 {/* Card 2: Customer Data */}
-                <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '1.25rem' }}>
-                  <div style={{ fontSize: '0.8rem', color: '#6B7280', marginBottom: '0.2rem' }}>Customer Data</div>
-                  <div style={{ fontSize: '1.5rem', fontWeight: 800, color: '#111827', margin: '0.2rem 0' }}>5,200</div>
-                  <span style={{ fontSize: '0.75rem', color: '#0B996E', fontWeight: 600 }}>New contacts added</span>
+                <div style={{ background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '1rem' }}>
+                  <div style={{ fontSize: '0.775rem', color: '#6B7280', marginBottom: '0.2rem' }}>Customer Data</div>
+                  <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#111827', margin: '0.2rem 0' }}>5,200</div>
+                  <span style={{ fontSize: '0.7rem', color: '#0B996E', fontWeight: 600 }}>New contacts added</span>
                 </div>
 
               </div>
 
               {/* Revenue Graph Mockup */}
-              <div style={{ marginTop: '1.25rem', background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '1.25rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem', fontSize: '0.85rem' }}>
+              <div style={{ marginTop: '1rem', background: '#F9FAFB', border: '1px solid #E5E7EB', borderRadius: '12px', padding: '1rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem', fontSize: '0.8rem' }}>
                   <span style={{ fontWeight: 700, color: '#111827' }}>Revenue Run Rate</span>
                   <span style={{ fontWeight: 800, color: '#0B996E' }}>$19,450 / mo</span>
                 </div>
                 {/* SVG Curve */}
-                <svg viewBox="0 0 400 60" style={{ width: '100%', height: '40px' }}>
+                <svg viewBox="0 0 400 60" style={{ width: '100%', height: '36px' }}>
                   <path d="M 0 50 Q 100 10 200 40 T 400 10" fill="none" stroke="#0B996E" strokeWidth="3" />
                 </svg>
               </div>
