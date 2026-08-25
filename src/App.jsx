@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import AnnouncementBar from './components/AnnouncementBar';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import GlowingHeroOrb from './components/GlowingHeroOrb';
+import NeuronIntegrationMatrix from './components/NeuronIntegrationMatrix';
+import NeuralDataStream from './components/NeuralDataStream';
+import CyberneticTreeAEO from './components/CyberneticTreeAEO';
 import ToolkitFeatureGrid from './components/ToolkitFeatureGrid';
 import LeadFinderSandbox from './components/LeadFinderSandbox';
 import ProductSuiteTabs from './components/ProductSuiteTabs';
@@ -33,16 +36,28 @@ export default function App() {
       {/* Top Banner Notice */}
       <AnnouncementBar openBookingModal={() => setIsBookingOpen(true)} />
 
-      {/* GrowthToolkit Sticky Header */}
+      {/* Sticky Header Navigation */}
       <Navbar 
         theme={theme} 
         toggleTheme={toggleTheme} 
         openBookingModal={() => setIsBookingOpen(true)} 
       />
 
-      {/* Main GrowthToolkit.io Identical Page Flow */}
+      {/* Main Futuristic Cybernetic AI Page Flow */}
       <main>
-        <Hero openBookingModal={() => setIsBookingOpen(true)} />
+        {/* Boltshift & BusinessDec Central AI Orb Hero */}
+        <GlowingHeroOrb openBookingModal={() => setIsBookingOpen(true)} />
+
+        {/* Neuron Tool Integration Matrix */}
+        <NeuronIntegrationMatrix />
+
+        {/* Neural AI Data Stream (Brand Signals) */}
+        <NeuralDataStream />
+
+        {/* Cybernetic Neural Tree (GEO & AEO) */}
+        <CyberneticTreeAEO openBookingModal={() => setIsBookingOpen(true)} />
+
+        {/* B2B Prospecting & Verification Tools */}
         <LeadFinderSandbox />
         <ToolkitFeatureGrid openBookingModal={() => setIsBookingOpen(true)} />
         <ProductSuiteTabs openBookingModal={() => setIsBookingOpen(true)} />
