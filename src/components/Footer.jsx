@@ -26,7 +26,7 @@ export default function Footer({ openBookingModal }) {
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: '3rem',
-          marginBottom: '4rem'
+          marginBottom: '3rem'
         }}>
           {/* Brand Info Column */}
           <div style={{ gridColumn: 'span 2', maxWidth: '420px' }}>
@@ -95,9 +95,9 @@ export default function Footer({ openBookingModal }) {
           </div>
         </div>
 
-        {/* Infrastructure Telemetry Footer Bar (IITDEVELOPER Highlighted) */}
+        {/* Clean Copyright Footer Bar */}
         <div style={{
-          paddingTop: '2rem',
+          paddingTop: '1.5rem',
           borderTop: '1px solid var(--border-color)',
           display: 'flex',
           alignItems: 'center',
@@ -108,19 +108,7 @@ export default function Footer({ openBookingModal }) {
           color: 'var(--text-muted)'
         }}>
           <div>
-            <span>© 2026 Growixa AI Platform Inc. Powered by <strong>IITDEVELOPER</strong> | Document ID: <code style={{ fontFamily: 'var(--font-mono)', color: 'var(--text-primary)', fontWeight: 700 }}>DOC-PROD-CATALOG-PDF</code></span>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontFamily: 'var(--font-mono)' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#0B996E', fontWeight: 700 }}>
-              <span className="pulse-dot" style={{ width: '6px', height: '6px' }} /> Postgres: OK
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#0B996E', fontWeight: 700 }}>
-              Redis: OK
-            </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', color: '#0B996E', fontWeight: 700 }}>
-              RabbitMQ: OK (IITDEVELOPER INFRASTRUCTURE)
-            </span>
+            <span>© 2026 Growixa AI Platform Inc. All rights reserved. Powered by <strong>IITDEVELOPER</strong>.</span>
           </div>
         </div>
       </div>
