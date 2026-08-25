@@ -74,64 +74,108 @@ export default function AISimulator() {
   };
 
   return (
-    <section id="ai-composer" style={{ padding: '6rem 0' }}>
+    <section id="ai-composer" style={{ padding: '6rem 0', background: '#030712', borderTop: '1px solid rgba(255, 255, 255, 0.1)', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
       <div className="container">
         {/* Header */}
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 3.5rem auto' }}>
-          <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-indigo)' }}>
+          <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#00F0FF' }}>
             GRX-FEAT-021 & GRX-FEAT-022 Live Simulator
           </span>
-          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', marginTop: '0.5rem', marginBottom: '1rem' }}>
-            Test the <span className="gradient-text">AI Content Assistant & Brand Safety</span>
+          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', marginTop: '0.5rem', marginBottom: '1rem', color: '#FFFFFF' }}>
+            Test the <span style={{ color: '#00F0FF' }}>AI Content Assistant & Brand Safety</span>
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem' }}>
+          <p style={{ color: '#94A3B8', fontSize: '1.1rem' }}>
             Experience how Growixa's AI generates channel-optimized copy with real-time brand voice enforcement and token telemetry.
           </p>
         </div>
 
-        {/* Sandbox Glass Panel */}
-        <div className="glass-card" style={{ padding: '2rem', borderRadius: 'var(--radius-lg)', maxWidth: '1000px', margin: '0 auto' }}>
+        {/* Sandbox Dark Panel */}
+        <div style={{ background: '#0B1120', padding: '2rem', borderRadius: 'var(--radius-lg)', maxWidth: '1000px', margin: '0 auto', border: '1px solid rgba(0, 240, 255, 0.3)', boxShadow: '0 0 40px rgba(0, 240, 255, 0.15)' }}>
           {/* Controls Bar */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid var(--border-color)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
             <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
               <button
                 onClick={() => setSelectedChannel('email')}
-                className={selectedChannel === 'email' ? 'btn-primary' : 'btn-secondary'}
-                style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
+                style={{
+                  background: selectedChannel === 'email' ? '#00F0FF' : 'rgba(255, 255, 255, 0.05)',
+                  color: selectedChannel === 'email' ? '#030712' : '#FFFFFF',
+                  border: '1px solid rgba(0, 240, 255, 0.4)',
+                  borderRadius: '8px',
+                  padding: '0.5rem 1rem',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
+                }}
               >
                 <Mail size={16} /> Email Campaign
               </button>
               <button
                 onClick={() => setSelectedChannel('linkedin')}
-                className={selectedChannel === 'linkedin' ? 'btn-primary' : 'btn-secondary'}
-                style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
+                style={{
+                  background: selectedChannel === 'linkedin' ? '#00F0FF' : 'rgba(255, 255, 255, 0.05)',
+                  color: selectedChannel === 'linkedin' ? '#030712' : '#FFFFFF',
+                  border: '1px solid rgba(0, 240, 255, 0.4)',
+                  borderRadius: '8px',
+                  padding: '0.5rem 1rem',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
+                }}
               >
                 <Share2 size={16} /> LinkedIn Post
               </button>
               <button
                 onClick={() => setSelectedChannel('twitter')}
-                className={selectedChannel === 'twitter' ? 'btn-primary' : 'btn-secondary'}
-                style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
+                style={{
+                  background: selectedChannel === 'twitter' ? '#00F0FF' : 'rgba(255, 255, 255, 0.05)',
+                  color: selectedChannel === 'twitter' ? '#030712' : '#FFFFFF',
+                  border: '1px solid rgba(0, 240, 255, 0.4)',
+                  borderRadius: '8px',
+                  padding: '0.5rem 1rem',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
+                }}
               >
                 <MessageSquare size={16} /> Twitter/X Thread
               </button>
               <button
                 onClick={() => setSelectedChannel('sms')}
-                className={selectedChannel === 'sms' ? 'btn-primary' : 'btn-secondary'}
-                style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
+                style={{
+                  background: selectedChannel === 'sms' ? '#00F0FF' : 'rgba(255, 255, 255, 0.05)',
+                  color: selectedChannel === 'sms' ? '#030712' : '#FFFFFF',
+                  border: '1px solid rgba(0, 240, 255, 0.4)',
+                  borderRadius: '8px',
+                  padding: '0.5rem 1rem',
+                  fontSize: '0.85rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.4rem'
+                }}
               >
                 <Zap size={16} /> SMS Broadcast
               </button>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: '#34D399', background: 'rgba(16, 185, 129, 0.1)', padding: '0.35rem 0.75rem', borderRadius: 'var(--radius-full)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontSize: '0.8rem', color: '#34D399', background: 'rgba(52, 211, 153, 0.15)', padding: '0.35rem 0.75rem', borderRadius: 'var(--radius-full)', fontWeight: 700 }}>
               <ShieldCheck size={14} /> Brand Safety Engine Active
             </div>
           </div>
 
           {/* Prompt Input Area */}
           <div style={{ marginBottom: '1.5rem' }}>
-            <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', fontWeight: 600 }}>
+            <label style={{ display: 'block', fontSize: '0.85rem', color: '#F8FAFC', marginBottom: '0.5rem', fontWeight: 700 }}>
               Input Growth Campaign Prompt or Topic:
             </label>
             <div style={{ display: 'flex', gap: '0.75rem' }}>
@@ -139,14 +183,35 @@ export default function AISimulator() {
                 type="text"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
-                className="form-input"
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1rem',
+                  background: '#030712',
+                  border: '1px solid rgba(0, 240, 255, 0.4)',
+                  borderRadius: 'var(--radius-sm)',
+                  color: '#FFFFFF',
+                  fontFamily: 'var(--font-sans)',
+                  fontSize: '0.95rem',
+                  outline: 'none'
+                }}
                 placeholder="e.g. Announce our launch to B2B founders..."
               />
               <button
                 onClick={handleGenerate}
                 disabled={isGenerating}
-                className="btn-primary"
-                style={{ padding: '0.75rem 1.5rem', whiteSpace: 'nowrap' }}
+                style={{
+                  background: 'linear-gradient(135deg, #00F0FF 0%, #3B82F6 100%)',
+                  color: '#030712',
+                  fontWeight: 800,
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: 'var(--radius-sm)',
+                  border: 'none',
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}
               >
                 {isGenerating ? <RefreshCw size={18} className="animate-spin" /> : <Sparkles size={18} />}
                 <span>{isGenerating ? 'Generating...' : 'Generate AI Copy'}</span>
@@ -154,33 +219,36 @@ export default function AISimulator() {
             </div>
           </div>
 
-          {/* Generated Output Preview Box */}
+          {/* Generated Output Preview Box (Bright Crisp White Text) */}
           <div style={{
-            background: 'rgba(9, 13, 22, 0.9)',
+            background: '#030712',
             borderRadius: 'var(--radius-md)',
-            border: '1px solid var(--border-color)',
+            border: '1px solid rgba(0, 240, 255, 0.4)',
             padding: '1.5rem',
             position: 'relative'
           }}>
             {/* Header bar of preview box */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', borderBottom: '1px solid rgba(255, 255, 255, 0.06)', paddingBottom: '0.75rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem', borderBottom: '1px solid rgba(255, 255, 255, 0.1)', paddingBottom: '0.75rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Bot size={18} color="var(--accent-indigo)" />
-                <span style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--text-primary)' }}>
+                <Bot size={18} color="#00F0FF" />
+                <span style={{ fontSize: '0.95rem', fontWeight: 800, color: '#00F0FF' }}>
                   {generatedOutput.subject}
                 </span>
               </div>
               <button
                 onClick={copyToClipboard}
                 style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: copied ? 'var(--accent-emerald)' : 'var(--text-muted)',
+                  background: copied ? '#34D399' : 'rgba(0, 240, 255, 0.15)',
+                  border: '1px solid #00F0FF',
+                  color: copied ? '#030712' : '#00F0FF',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '0.3rem',
-                  fontSize: '0.8rem'
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                  padding: '0.35rem 0.75rem',
+                  borderRadius: '6px'
                 }}
               >
                 {copied ? <Check size={14} /> : <Copy size={14} />}
@@ -188,19 +256,20 @@ export default function AISimulator() {
               </button>
             </div>
 
-            {/* Generated Content Text */}
+            {/* Generated Content Text (Crisp Pure White Text) */}
             <pre style={{
               fontFamily: 'var(--font-sans)',
-              fontSize: '0.95rem',
-              color: 'var(--text-primary)',
+              fontSize: '1rem',
+              color: '#FFFFFF',
+              fontWeight: 500,
               whiteSpace: 'pre-wrap',
-              lineHeight: 1.6,
+              lineHeight: 1.7,
               margin: 0
             }}>
               {generatedOutput.body}
             </pre>
 
-            {/* Telemetry Footer Bar (GRX-FEAT-023 Spec) */}
+            {/* Telemetry Footer Bar */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
@@ -209,17 +278,17 @@ export default function AISimulator() {
               gap: '1rem',
               marginTop: '1.5rem',
               paddingTop: '1rem',
-              borderTop: '1px solid rgba(255, 255, 255, 0.06)',
-              fontSize: '0.775rem',
-              color: 'var(--text-muted)',
+              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+              fontSize: '0.8rem',
+              color: '#94A3B8',
               fontFamily: 'var(--font-mono)'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                 <span>🛡️ Brand Safety: <strong style={{ color: '#34D399' }}>{generatedOutput.safetyScore}% Approved</strong></span>
-                <span>⚡ Token Telemetry: <strong style={{ color: 'var(--text-primary)' }}>{generatedOutput.tokensUsed} Tokens</strong></span>
+                <span>⚡ Token Telemetry: <strong style={{ color: '#FFFFFF' }}>{generatedOutput.tokensUsed} Tokens</strong></span>
               </div>
               <div>
-                <span>Est. Provider Cost: <strong style={{ color: 'var(--accent-emerald)' }}>{generatedOutput.estimatedCost}</strong></span>
+                <span>Est. Provider Cost: <strong style={{ color: '#34D399' }}>{generatedOutput.estimatedCost}</strong></span>
               </div>
             </div>
           </div>
