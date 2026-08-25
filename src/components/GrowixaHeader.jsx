@@ -15,16 +15,14 @@ import {
   HelpCircle, 
   Phone, 
   Bot, 
-  Sun, 
-  Moon, 
   Menu, 
-  X,
-  Sparkles
+  X
 } from 'lucide-react';
 
 export default function GrowixaHeader({ theme, toggleTheme, openBookingModal }) {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +52,8 @@ export default function GrowixaHeader({ theme, toggleTheme, openBookingModal }) 
       onMouseLeave={() => setActiveDropdown(null)}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-        {/* Brand Logo - Growixa Format */}
+        
+        {/* Brand Logo */}
         <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
           <div style={{
             width: '36px',
@@ -74,7 +73,7 @@ export default function GrowixaHeader({ theme, toggleTheme, openBookingModal }) 
         </a>
 
         {/* Desktop Navigation Items */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '2.25rem', position: 'relative' }}>
+        <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '2rem', position: 'relative' }}>
           
           {/* Menu Item 1: Platform Dropdown */}
           <div 
@@ -275,8 +274,8 @@ export default function GrowixaHeader({ theme, toggleTheme, openBookingModal }) 
 
         </div>
 
-        {/* Right Header CTAs */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        {/* Right Desktop Actions */}
+        <div className="desktop-only" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <a href="#" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
             Log in
           </a>
@@ -297,7 +296,106 @@ export default function GrowixaHeader({ theme, toggleTheme, openBookingModal }) 
             <span>Get a demo</span>
           </button>
         </div>
+
+        {/* Mobile Hamburger Toggle Button */}
+        <div className="mobile-only">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: 'var(--text-primary)',
+              cursor: 'pointer',
+              padding: '0.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+            aria-label="Toggle Navigation Menu"
+          >
+            {mobileMenuOpen ? <X size={26} color="#0B996E" /> : <Menu size={26} />}
+          </button>
+        </div>
+
       </div>
+
+      {/* Mobile Overlay Menu Drawer */}
+      {mobileMenuOpen && (
+        <div 
+          className="animate-fade-in"
+          style={{
+            position: 'fixed',
+            top: '64px',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'var(--bg-primary)',
+            zIndex: 999,
+            padding: '2rem 1.5rem',
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1.5rem'
+          }}
+        >
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '1.5rem' }}>
+            <a 
+              href="#capabilities" 
+              onClick={() => setMobileMenuOpen(false)}
+              style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', textDecoration: 'none' }}
+            >
+              Platform Capabilities
+            </a>
+            <a 
+              href="#prospecting" 
+              onClick={() => setMobileMenuOpen(false)}
+              style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', textDecoration: 'none' }}
+            >
+              B2B Lead Finder
+            </a>
+            <a 
+              href="#pricing" 
+              onClick={() => setMobileMenuOpen(false)}
+              style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', textDecoration: 'none' }}
+            >
+              Pricing Plans
+            </a>
+            <a 
+              href="#ai-composer" 
+              onClick={() => setMobileMenuOpen(false)}
+              style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', textDecoration: 'none' }}
+            >
+              AI Content Assistant
+            </a>
+            <a 
+              href="#calculator" 
+              onClick={() => setMobileMenuOpen(false)}
+              style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--text-primary)', textDecoration: 'none' }}
+            >
+              ROI Calculator
+            </a>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
+            <button 
+              onClick={() => { setMobileMenuOpen(false); openBookingModal(); }}
+              className="btn-primary"
+              style={{ width: '100%', justifyContent: 'center', padding: '0.85rem' }}
+            >
+              <span>Sign Up Free</span>
+            </button>
+
+            <button 
+              onClick={() => { setMobileMenuOpen(false); openBookingModal(); }}
+              className="btn-secondary"
+              style={{ width: '100%', justifyContent: 'center', padding: '0.85rem' }}
+            >
+              <span>Get a demo</span>
+            </button>
+          </div>
+        </div>
+      )}
+
     </header>
   );
 }
