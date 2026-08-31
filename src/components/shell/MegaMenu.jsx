@@ -26,8 +26,7 @@ export default function MegaMenu({ label, items, footer }) {
   }, [open]);
 
   // Hover only where a real pointer exists; touch devices use click.
-  const hoverable =
-    typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
+  const hoverable = typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
 
   return (
     <div
@@ -72,7 +71,9 @@ export default function MegaMenu({ label, items, footer }) {
                   {it.statusLabel ? (
                     <Tag
                       status={it.status}
-                      label={it.status === STATUS.SOON ? `Coming ${it.statusLabel}` : it.statusLabel}
+                      label={
+                        it.status === STATUS.SOON ? `Coming ${it.statusLabel}` : it.statusLabel
+                      }
                     />
                   ) : null}
                 </span>

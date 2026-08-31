@@ -64,10 +64,7 @@ describe('MegaMenu', () => {
   it('links each stage to its route', async () => {
     setup();
     await userEvent.click(screen.getByRole('button', { name: /platform/i }));
-    expect(screen.getByRole('link', { name: /find/i })).toHaveAttribute(
-      'href',
-      '/platform/find'
-    );
+    expect(screen.getByRole('link', { name: /find/i })).toHaveAttribute('href', '/platform/find');
   });
 
   it('marks an unshipped stage as coming, not merely dated', async () => {
