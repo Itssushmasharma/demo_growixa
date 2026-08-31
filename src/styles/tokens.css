@@ -1,10 +1,10 @@
 :root {
   /* stage hues — base for fills, -l for tints, -d for text on light */
   --find: #00a9e0;      --find-l: #e4f6fd;      --find-d: #00688a;
-  --qualify: #ff9500;   --qualify-l: #fff2e0;   --qualify-d: #b36a00;
+  --qualify: #ff9500;   --qualify-l: #fff2e0;   --qualify-d: #a15f00;
   --create: #7b4dff;    --create-l: #eee9ff;    --create-d: #5b2cff;
   --send: #ff3f73;      --send-l: #ffe7ee;      --send-d: #c81e4c;
-  --manage: #00b884;    --manage-l: #dff7ef;    --manage-d: #00845f;
+  --manage: #00b884;    --manage-l: #dff7ef;    --manage-d: #007d5a;
 
   /* ground */
   --ink: #0b0c16;
