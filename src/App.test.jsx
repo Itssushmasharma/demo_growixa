@@ -5,7 +5,10 @@ import { AppRoutes } from './App';
 
 function renderAt(path) {
   return render(
-    <MemoryRouter initialEntries={[path]}>
+    <MemoryRouter
+      initialEntries={[path]}
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+    >
       <AppRoutes />
     </MemoryRouter>
   );
@@ -14,7 +17,9 @@ function renderAt(path) {
 describe('routing', () => {
   it('renders the home page at /', () => {
     renderAt('/');
-    expect(screen.getByRole('heading', { level: 1 })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { level: 1, name: /working while you sleep/i })
+    ).toBeInTheDocument();
   });
 
   it('renders a not-found page for an unknown path', () => {

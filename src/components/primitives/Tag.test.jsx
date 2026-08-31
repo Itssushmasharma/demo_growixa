@@ -12,8 +12,10 @@ describe('Tag', () => {
   it('applies a distinct class per status', () => {
     const { rerender } = render(<Tag status={STATUS.LIVE} label="Live" />);
     const live = screen.getByText('Live').className;
+    rerender(<Tag status={STATUS.BETA} label="Beta" />);
+    const beta = screen.getByText('Beta').className;
     rerender(<Tag status={STATUS.SOON} label="Q4 2026" />);
     const soon = screen.getByText('Q4 2026').className;
-    expect(live).not.toBe(soon);
+    expect(new Set([live, beta, soon]).size).toBe(3);
   });
 });

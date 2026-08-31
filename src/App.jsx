@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { ROUTES } from './routes';
 import Wrap from './components/layout/Wrap';
 import Section from './components/layout/Section';
@@ -27,11 +28,29 @@ export function AppRoutes() {
   );
 }
 
+function RouteChangeReset() {
+  const { pathname } = useLocation();
+  const first = useRef(true);
+  useEffect(() => {
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    window.scrollTo(0, 0);
+    document.getElementById('main')?.focus();
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <RouteChangeReset />
       <Header />
-      <main>
+      <main id="main" tabIndex={-1}>
         <AppRoutes />
       </main>
       <Footer />

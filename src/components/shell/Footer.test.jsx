@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 function setup() {
   return render(
-    <MemoryRouter>
+    <MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <Footer />
     </MemoryRouter>
   );
@@ -27,6 +27,10 @@ describe('Footer', () => {
 
   it('states the honest build status in the base row', () => {
     setup();
-    expect(screen.getByText(/qualify ships q4/i)).toBeInTheDocument();
+    expect(
+      screen.getByText(
+        'Campaigns and contacts are live. Find and Create are in beta. Qualify ships Q4.'
+      )
+    ).toBeInTheDocument();
   });
 });

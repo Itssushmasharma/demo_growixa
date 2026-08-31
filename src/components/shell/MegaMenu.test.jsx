@@ -7,7 +7,7 @@ import { STAGES } from '../../content/stages';
 
 function setup() {
   return render(
-    <MemoryRouter>
+    <MemoryRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <MegaMenu label="Platform" items={STAGES} />
       <button type="button">outside</button>
     </MemoryRouter>

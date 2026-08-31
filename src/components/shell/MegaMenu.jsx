@@ -8,14 +8,40 @@ import styles from './MegaMenu.module.css';
 export default function MegaMenu({ label, items, footer }) {
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
+  const triggerRef = useRef(null);
+  const closeTimer = useRef(null);
+  const panelId = `mega-${label.toLowerCase()}`;
+
+  const cancelClose = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+
+  const scheduleClose = () => {
+    cancelClose();
+    // Grace period so a diagonal pointer path toward the panel does not
+    // close it while crossing the gap beside the trigger.
+    closeTimer.current = setTimeout(() => setOpen(false), 120);
+  };
+
+  useEffect(() => cancelClose, []);
 
   useEffect(() => {
     if (!open) return undefined;
     const onKey = (e) => {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key === 'Escape') {
+        cancelClose();
+        setOpen(false);
+        triggerRef.current?.focus();
+      }
     };
     const onClick = (e) => {
-      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target)) {
+        cancelClose();
+        setOpen(false);
+      }
     };
     document.addEventListener('keydown', onKey);
     document.addEventListener('mousedown', onClick);
@@ -32,14 +58,20 @@ export default function MegaMenu({ label, items, footer }) {
     <div
       className={`${styles.item} ${open ? styles.open : ''}`}
       ref={ref}
-      onMouseEnter={hoverable ? () => setOpen(true) : undefined}
-      onMouseLeave={hoverable ? () => setOpen(false) : undefined}
+      onMouseEnter={hoverable ? () => { cancelClose(); setOpen(true); } : undefined}
+      onMouseLeave={hoverable ? scheduleClose : undefined}
     >
       <button
         type="button"
+        ref={triggerRef}
         className={styles.trigger}
         aria-expanded={open}
-        onClick={() => setOpen((v) => (hoverable ? true : !v))}
+        aria-haspopup="true"
+        aria-controls={panelId}
+        onClick={(e) => {
+          const fromPointer = e.detail > 0;
+          setOpen((v) => (hoverable && fromPointer ? true : !v));
+        }}
       >
         {label}
         <svg className={styles.caret} width="12" height="12" viewBox="0 0 14 14" aria-hidden="true">
@@ -54,7 +86,7 @@ export default function MegaMenu({ label, items, footer }) {
         </svg>
       </button>
 
-      <div className={styles.panel} hidden={!open}>
+      <div id={panelId} className={styles.panel} hidden={!open}>
         <div className={styles.grid}>
           {items.map((it) => (
             <Link
