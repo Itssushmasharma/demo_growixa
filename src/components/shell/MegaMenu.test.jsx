@@ -76,4 +76,37 @@ describe('MegaMenu', () => {
     expect(screen.getByText(/^Coming /)).toBeInTheDocument();
     expect(screen.queryByText(/^Q4 2026$/)).not.toBeInTheDocument();
   });
+
+  it('stays open when a mouse user clicks a menu already opened by hover', async () => {
+    const original = window.matchMedia;
+    window.matchMedia = (q) => ({
+      matches: q === '(hover: hover)',
+      media: q,
+      onchange: null,
+      addEventListener: () => {},
+      removeEventListener: () => {},
+      addListener: () => {},
+      removeListener: () => {},
+      dispatchEvent: () => false,
+    });
+    try {
+      setup();
+      const trigger = screen.getByRole('button', { name: /platform/i });
+      await userEvent.hover(trigger);
+      expect(trigger).toHaveAttribute('aria-expanded', 'true');
+      await userEvent.click(trigger);
+      expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    } finally {
+      window.matchMedia = original;
+    }
+  });
+
+  it('still toggles closed on click for touch devices with no hover', async () => {
+    setup();
+    const trigger = screen.getByRole('button', { name: /platform/i });
+    await userEvent.click(trigger);
+    expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    await userEvent.click(trigger);
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+  });
 });

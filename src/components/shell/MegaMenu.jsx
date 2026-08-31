@@ -40,7 +40,7 @@ export default function MegaMenu({ label, items, footer }) {
         type="button"
         className={styles.trigger}
         aria-expanded={open}
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setOpen((v) => (hoverable ? true : !v))}
       >
         {label}
         <svg className={styles.caret} width="12" height="12" viewBox="0 0 14 14" aria-hidden="true">

@@ -52,6 +52,18 @@
   display: none;
 }
 
+/* Transparent bridge across the 10px gap. Without it the pointer leaves
+   .item mid-travel, fires mouseleave, and the panel closes before the
+   cursor reaches it. */
+.panel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 10px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
