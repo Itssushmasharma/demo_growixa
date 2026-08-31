@@ -86,10 +86,10 @@ what killed dark mode and broke five variables in the previous codebase.
 
 ```css
 --find:#00A9E0;     --find-l:#E4F6FD;     --find-d:#00688A;
---qualify:#FF9500;  --qualify-l:#FFF2E0;  --qualify-d:#B36A00;
+--qualify:#FF9500;  --qualify-l:#FFF2E0;  --qualify-d:#A15F00;
 --create:#7B4DFF;   --create-l:#EEE9FF;   --create-d:#5B2CFF;
 --send:#FF3F73;     --send-l:#FFE7EE;     --send-d:#C81E4C;
---manage:#00B884;   --manage-l:#DFF7EF;   --manage-d:#00845F;
+--manage:#00B884;   --manage-l:#DFF7EF;   --manage-d:#007D5A;
 ```
 
 - **base** — fills, dots, rules, glows, 3px card top-borders
