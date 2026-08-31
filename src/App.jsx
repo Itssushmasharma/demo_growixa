@@ -3,6 +3,7 @@ import { ROUTES } from './routes';
 import Wrap from './components/layout/Wrap';
 import Section from './components/layout/Section';
 import Header from './components/shell/Header';
+import Footer from './components/shell/Footer';
 
 function NotFound() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
       <main>
         <AppRoutes />
       </main>
+      <Footer />
     </BrowserRouter>
   );
 }
