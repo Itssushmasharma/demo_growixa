@@ -268,7 +268,7 @@ npm install @fontsource-variable/bricolage-grotesque@^5.1.0 \
   --paper-3: #ededf5;
   --line: #e4e4ef;
   --mut: #5c6076;
-  --faint: #8a8fa6;
+  --faint: #656a82;
 
   /* dark bands */
   --stage: #08080f;

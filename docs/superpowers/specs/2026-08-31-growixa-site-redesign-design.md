@@ -101,7 +101,7 @@ what killed dark mode and broke five variables in the previous codebase.
 
 ```css
 --ink:#0B0C16;      --paper:#FFFFFF;    --paper-2:#F6F6FB;  --paper-3:#EDEDF5;
---line:#E4E4EF;     --mut:#5C6076;      --faint:#8A8FA6;
+--line:#E4E4EF;     --mut:#5C6076;      --faint:#656A82;
 --stage:#08080F;    --stage-fg:#F2F2F8; --stage-mut:#9096B0; --stage-line:#22223A;
 ```
 
