@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ROUTES } from './routes';
 import Wrap from './components/layout/Wrap';
 import Section from './components/layout/Section';
+import Header from './components/shell/Header';
 
 function NotFound() {
   return (
@@ -28,7 +29,10 @@ export function AppRoutes() {
 export default function App() {
   return (
     <BrowserRouter>
-      <AppRoutes />
+      <Header />
+      <main>
+        <AppRoutes />
+      </main>
     </BrowserRouter>
   );
 }
